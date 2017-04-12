@@ -113,7 +113,7 @@ a:hover {
 
 /*! Helpers*/
 /*常用颜色*/
-/*！layout 布局*/
+/*锛乴ayout */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -208,6 +208,9 @@ img {
   z-index: 290;
   font-size: 0.75rem;
 }
+.fsNav a {
+  color: #999;
+}
 .fsNav .fsWidth {
   width: 1190px;
   margin: 0 auto;
@@ -223,21 +226,94 @@ img {
   float: left;
   line-height: 28px;
 }
-.fsNav .fsWidth .fsNavList li .fsMyHome {
+.fsNav .fsWidth .fsNavList li.fore {
   position: relative;
   border: 1px solid #f8f8f8;
   height: 28px;
 }
-.fsNav .fsWidth .fsNavList li .fsMyHome a {
+.fsNav .fsWidth .fsNavList li.fsMyHome a {
   height: 28px;
 }
-.fsNav .fsWidth .fsNavList li .fsMyHome ol.fsDropdown {
-  width: 68px;
+.fsNav .fsWidth .fsNavList li.fsMyHome ol.homeSelf {
+  width: 86px;
   line-height: 22px;
   padding: 1px 10px 10px;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .drop-title {
+  position: relative;
+  display: block;
+  padding: 0 20px 0 8px;
+  z-index: 200;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox {
+  width: 245px;
+  padding-bottom: 15px;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList {
+  height: auto;
+  max-height: 234px;
+  padding: 10px 15px;
+  overflow-y: auto;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li {
+  border-bottom: 1px dotted #eaeaea;
+  padding: 10px 0;
+  line-height: 18px;
+  height: auto;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li a.cart-img {
+  margin-left: 98px;
+  margin-top: 3px;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li a.cart-img img {
+  float: left;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li a.cart-link {
+  display: block;
+  height: 36px;
+  color: #666;
+  margin-left: 98px;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li p.cart-cal {
+  margin-left: 98px;
+  margin-top: 3px;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsMyCartList li p.cart-cal > a {
+  float: right;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsCountArea {
+  text-align: right;
+  padding-right: 15px;
+  font-weight: bold;
+  color: #999;
+  margin: 0 2px 0 4px;
+}
+.fsNav .fsWidth .fsNavList li.fsMyCart .fsMyCartBox .fsCountArea a {
+  background-color: #cf000e;
+  display: inline-block;
+  color: #fff;
+  padding: 0 10px;
+}
+.fsNav .fsWidth .fsNavList li .fsGaerCode {
+  padding: 14px 22px;
+  text-align: center;
+}
+.fsNav .fsWidth .fsNavList li.hover {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #fff;
+}
+.fsNav .fsWidth .fsNavList li:hover .fsGaerCode {
+  display: block;
+}
+
+.fsDropdown {
   z-index: 100;
   position: absolute;
-  top: 28px;
+  top: 27px;
   left: -1px;
   background-color: #fff;
   border: 1px solid #eaeaea;
@@ -245,7 +321,7 @@ img {
   border-top: 0;
 }
 
-/*! Component 组件*/
+/*! Component */
 .fs-table {
   table-layout: fixed;
   width: 1300px;

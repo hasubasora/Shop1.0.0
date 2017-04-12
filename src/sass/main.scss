@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*! Vendor*/
 
 @import "compass",
@@ -18,12 +16,12 @@
 @import "helpers/variables",
 "helpers/mixins";
 
-/*！layout 布局*/
+/*！layout */
 
 @import "layout/main",
 "layout/header";
 
-/*! Component 组件*/
+/*! Component */
 
 @import // "components/mode",
 //"components/qualify",

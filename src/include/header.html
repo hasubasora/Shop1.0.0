@@ -9,41 +9,53 @@
             <li><a href="">免费注册</a></li>
         </ul>
         <ul class="fsNavList">
-            <li class="fsMyHome">
-                <a class="drop-title" href="/user/?act=index" target="_blank">我的美乐乐<i class="drop-arrow" target="_blank"></i></a>
-                <ol class="fsDropdown">
-                    <li><a href="/user/?act=order_list" target="_blank">我的订单</a>
+            <li class="fsMyHome fore ">
+                <a class="drop-title" href="" target="_blank">我的美乐乐<i class="fa fa-camera-retro"></i> </a>
+                <ol class="fsDropdown homeSelf">
+                    <li><a href="" target="_blank">我的订单</a>
                     </li>
-                    <li><a href="/user/?act=coin_log" target="_blank">我的金币</a>
+                    <li><a href="" target="_blank">我的金币</a>
                     </li>
-                    <li><a href="/user/?act=bonus" target="_blank">我的红包</a>
+                    <li><a href="" target="_blank">我的红包</a>
                     </li>
-                    <li><a href="/user/?act=collection_list" target="_blank">我的收藏</a>
+                    <li><a href="" target="_blank">我的收藏</a>
                     </li>
-                    <li><a href="/user/?act=comment_list" target="_blank">我要评价</a>
+                    <li><a href="" target="_blank">我要评价</a>
                     </li>
-                    <li><a href="/user/?act=insured_apply" target="_blank">申请保价</a>
+                    <li><a href="" target="_blank">申请保价</a>
                     </li>
                 </ol>
             </li>
-            <li id="JS_cart" class="phc-cart fl fore">
-                <a class="drop-title" href="/flow/?step=cart&amp;rel=header" target="_blank" onmouseenter="window._gaq.push(['_trackEvent','2016版首页','鼠标移入购物车区域','onMouseOver'])"><i class="i-cart"></i><span class="cart-word">购物车<span id="JS_cart_num" class="cart-count">0</span></span><i class="drop-arrow"></i></a>
-                <div id="JS_cart_box" class="cart-box dropdown cart-self">
-                    <ul id="JS_cart_list" class="cart-list" onclick="Cart.del(event);">
+            <li id="fsMyCart" class="fsMyCart fore">
+                <a class="drop-title" href="/flow/?step=cart&amp;rel=header" target="_blank"><i class="i-cart"></i><span class="cart-word">购物车<span id="JS_cart_num" class="cart-count">0</span></span><i class="drop-arrow"></i></a>
+                <div id="fsMyCartBox" class="fsMyCartBox fsDropdown">
+                    <ul id="fsMyCartList" class="fsMyCartList">
+                        <li class="cartList_index_0" data-num="1" data-rec_id="27051715" data-index="0">
+                            <a class="cart-img" href="" target="_blank" title=""><img class="fl" src="http://img003.mllres.com/images/201604/1461224175314272875.jpg" alt="" width="86" height="57"></a><a target="_blank" class="cart-link" title="" href="">【Hey美人】1.8*2.0米七区独立弹簧床垫 比利时“随时控“面料 天然乳胶 防螨海绵 记忆海绵 两公分3D材料层</a>
+                            <p class="cart-cal clearfix"><a data-goods_id="244605" class="fr black Cart_del" href="javascript:void(0)" data-index="0" data-rec_id="27051715" data-num="1" data-goods_price="5199.00" data-act_id="0">删除</a><span class="red" id="JS_danjia0">¥5199.00</span>×
+                                <span class="black">1</span>
+                            </p>
+                        </li>
+                        <li class="cartList_index_0" data-num="1" data-rec_id="27051715" data-index="0">
+                            <a class="cart-img" href="" target="_blank" title=""><img class="fl" src="http://img003.mllres.com/images/201604/1461224175314272875.jpg" alt="" width="86" height="57"></a><a target="_blank" class="cart-link" title="" href="">【Hey美人】1.8*2.0米七区独立弹簧床垫 比利时“随时控“面料 天然乳胶 防螨海绵 记忆海绵 两公分3D材料层</a>
+                            <p class="cart-cal clearfix"><a data-goods_id="244605" class="fr black Cart_del" href="javascript:void(0)" data-index="0" data-rec_id="27051715" data-num="1" data-goods_price="5199.00" data-act_id="0">删除</a><span class="red" id="JS_danjia0">¥5199.00</span>×
+                                <span class="black">1</span>
+                            </p>
+                        </li>
                         <li class="nothing"><b class="common-bg nothing-icon"></b>&nbsp;购物车中还没有商品，赶紧选购吧！</li>
                     </ul>
-                    <div id="JS_count_area" class="cart-count none shopcart-count">
+                    <div id="fsCountArea" class="fsCountArea none shopcart-count">
                         <p class="count-area">共<span id="JS_cart_count">0</span>件商品，共计<strong id="JS_count_total" class="count-total red">¥00.00</strong>
                         </p>
                         <a class="count-btn" target="_blank" href="/flow/?step=cart&amp;rel=header">去购物车结算</a>
                     </div>
                 </div>
             </li>
-            <li class="fl fore">
-                <a class="drop-title" href="/user/?act=index" target="_blank"><i class="i-scan"></i><span class="scan-word">关注美乐乐</span><i class="drop-arrow"></i></a>
-                <ul class="dropdown two-dimension">
+            <li class="fore">
+                <a class="drop-title" href="" target="_blank"><i class="i-scan"></i><span class="scan-word">关注美乐乐</span><i class="drop-arrow"></i></a>
+                <ul class="fsDropdown fsGaerCode">
                     <li>
-                        <a href="javascript:;" class="JS_header_gaerCode" target="_blank">
+                        <a href="javascript:;" target="_blank">
                             <img src="http://img003.mllres.com/images/201704/dfad46af6bcae11c07c491b7c73d7bf3.jpg" width="132px" height="132px">
                         </a>
                         <span>扫码关注</span>
@@ -51,38 +63,40 @@
                     </li>
                 </ul>
             </li>
-            <li class="fl fore">
-                <a class="drop-title" href="/article_cat-4/article-656.html" target="_blank">帮助中心<i class="drop-arrow" target="_blank"></i></a>
+            <li class="fore">
+                <a class="drop-title" href="" target="_blank">帮助中心<i class="drop-arrow" target="_blank"></i></a>
                 <ul class="dropdown help-center">
-                    <li><a href="/article_cat-6/article-101.html" target="_blank">购买流程</a>
+                    <li><a href="" target="_blank">购买流程</a>
                     </li>
-                    <li><a href="javascript:;" onclick="window.mchat&amp;&amp;window.mchat.openui&amp;&amp; window.mchat.openui()" rel="nofollow">在线帮助</a>
+                    <li><a href="javascript:;">在线帮助</a>
                     </li>
-                    <li><a href="/page_buniess_purchase.html" target="_blank">企业采购</a>
+                    <li><a href="" target="_blank">企业采购</a>
                     </li>
                 </ul>
             </li>
             <li class="fl banner">
                 <a href="javascript:;" onclick="shoucang()">收藏本站</a>
             </li>
-            <li class="fl banner last">
-                <span class="blank" style="width:222px;height:24px;z-index:2"></span>
-                <div id="JS_head_scoll_phone_527" class="JS_head_scoll_phone_527_active_br">
-                    <div class="expr_scroll">
-                        <div class="expr_view" id="_JS_scroll_phone_g" onmouseover="window._headPhoneScroll527Lock=true" onmouseout="window._headPhoneScroll527Lock=false" style="margin-top: -26px;">
-                            <div class="expr_item" id="JS_show_hot_527"><span>全国热线：</span><span class="hotLine">400 0098666</span></div>
-                            <div class="expr_item"><a href="/guangzhou/visit-504.html" target="_blank" title="广州海珠区琶洲体验馆">海珠区琶洲体验馆：</a><span class="hotLine">020-89629820</span></div>
-                            <div class="expr_item"><a href="/guangzhou/visit-503.html" target="_blank" title="广州天河区体验馆">天河区体验馆：</a><span class="hotLine">17701916782</span></div>
-                            <div class="expr_item" id="JS_show_hot_527"><span>全国热线：</span><span class="hotLine">400 0098666</span></div>
-                            <div class="expr_item"><a href="/guangzhou/visit-504.html" target="_blank" title="广州海珠区琶洲体验馆">海珠区琶洲体验馆：</a><span class="hotLine">020-89629820</span></div>
-                            <div class="expr_item"><a href="/guangzhou/visit-503.html" target="_blank" title="广州天河区体验馆">天河区体验馆：</a><span class="hotLine">17701916782</span></div>
-                        </div>
-                    </div>
-                    <div class="show_panel" id="JS_show_panel_527" style="display: none;"><span class="item"><a href="/guangzhou/visit-504.html" target="_blank" title="广州海珠区琶洲体验馆">海珠区琶洲体验馆：</a><span class="hotLine">020-89629820</span></span><span class="item"><a href="/guangzhou/visit-503.html" target="_blank" title="广州天河区体验馆">天河区体验馆：</a><span class="hotLine">17701916782</span></span>
-                    </div>
-                </div>
-            </li>
+
         </ul>
     </nav>
 
 </header>
+
+<script>
+    $('.fsMyHome').hover(function() {
+        $('.homeSelf').show()
+    }, function() {
+        $('.homeSelf').hide()
+    })
+    $('.fsMyCart').hover(function() {
+        $('.fsMyCartBox').show()
+    }, function() {
+        $('.fsMyCartBox').hide()
+    })
+    $('.fsNavList>li').hover(function() {
+        $(this).addClass('hover')
+    }, function() {
+        $(this).removeClass('hover')
+    })
+</script>

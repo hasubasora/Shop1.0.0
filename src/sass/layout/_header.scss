@@ -1,4 +1,7 @@
 .fsNav {
+    a {
+        color: #999;
+    }
     background-color: #f8f8f8;
     height: 30px;
     width: 100%;
@@ -15,30 +18,113 @@
                 padding: 0 8px;
                 float: left;
                 line-height: 28px;
-                .fsMyHome {
+                &.fore {
                     position: relative;
                     border: 1px solid #f8f8f8;
-                    height: 28px;
+                    height: 28px
+                }
+                &.fsMyHome {
                     a {
                         height: 28px;
                     }
                     ol {
-                        &.fsDropdown {
-                            width: 68px;
+                        &.homeSelf {
+                            width: 86px;
                             line-height: 22px;
                             padding: 1px 10px 10px;
-                            z-index: 100;
-                            position: absolute;
-                            top: 28px;
-                            left: -1px;
-                            background-color: #fff;
-                            border: 1px solid #eaeaea;
-                            display: none;
-                            border-top: 0;
                         }
                     }
+                }
+                &.fsMyCart {
+                    .drop-title {
+                        position: relative;
+                        display: block;
+                        padding: 0 20px 0 8px;
+                        z-index: 200;
+                    }
+                    .fsMyCartBox {
+                        width: 245px;
+                        padding-bottom: 15px;
+                        //cart list
+                        .fsMyCartList {
+                            height: auto;
+                            max-height: 234px;
+                            padding: 10px 15px;
+                            overflow-y: auto;
+                            li {
+                                border-bottom: 1px dotted #eaeaea;
+                                padding: 10px 0;
+                                line-height: 18px;
+                                height: auto;
+                                a {
+                                    &.cart-img {
+                                        margin-left: 98px;
+                                        margin-top: 3px;
+                                        img {
+                                            float: left;
+                                        }
+                                    }
+                                    &.cart-link {
+                                        display: block;
+                                        height: 36px;
+                                        color: #666;
+                                        margin-left: 98px;
+                                        overflow: hidden;
+                                        word-break: break-all;
+                                        word-wrap: break-word;
+                                    }
+                                }
+                                p {
+                                    &.cart-cal {
+                                        margin-left: 98px;
+                                        margin-top: 3px;
+                                        >a {
+                                            float: right;
+                                        }
+                                    }
+                                }
+                            }
+                        } //goods all
+                        .fsCountArea {
+                            text-align: right;
+                            padding-right: 15px;
+                            font-weight: bold;
+                            color: #999;
+                            margin: 0 2px 0 4px;
+                            a {
+                                background-color: #cf000e;
+                                display: inline-block;
+                                color: #fff;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+                .fsGaerCode {
+                    padding: 14px 22px;
+                    text-align: center;
+                }
+                &.hover {
+                    background: #fff;
+                    border: 1px solid #eaeaea;
+                    border-bottom: 1px solid #fff;
+                }
+                &:hover .fsGaerCode {
+                    display: block;
                 }
             }
         }
     }
+}
+
+// list
+.fsDropdown {
+    z-index: 100;
+    position: absolute;
+    top: 27px;
+    left: -1px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    display: none;
+    border-top: 0;
 }
