@@ -1,0 +1,169 @@
+@charset "UTF-8";
+$fontSize:14px !default; //默认值 优先使用
+$paddings:4px 55px 20px 12px; //多值 1 2 3 4
+//多值第二种
+$maps:(color:red, borderColor:blue);
+//类名做成变量
+$classNames:alert;
+$borderDirection: top !default;
+body {
+    $color: red !global; //全局变量
+    color: $color;
+    font-size: $fontSize;
+    padding: $paddings;
+}
+
+footer {
+    color: $color;
+    padding-left: nth($paddings, 2); //取单值通过索引访问
+    background: map_get($maps, color); //多值索引第一个
+    border-color: map_get($maps, borderColor);
+}
+
+.#{$classNames} {
+    color: #000;
+    background: $color;
+}
+
+a span {
+    font-size: 23%;
+}
+
+div .cont {
+    @extend span;
+}
+
+$width:30px;
+p {
+    font: 20px / 30px;
+    width: $width/2;
+    width: round($width/2);
+    height: (100px/2); //告诉他是表达式
+}
+
+//加载片段
+@mixin cont {
+    color: #444;
+}
+
+body {
+    @include cont;
+}
+
+@mixin cont($col:red) {
+    //页可以传参
+    color: $col;
+}
+
+body {
+    @include cont(blue);
+}
+
+@mixin cont($col:red, $fontSize:12px) {
+    //页可以传参多个
+    color: $col;
+    font-size: $fontSize;
+}
+
+body {
+    @include cont(red); //传过去的顺序要一样
+}
+
+//实现浏览器兼容方法
+@mixin box-shadow($box...) {
+    //加三个点代表后面还有参数
+    -webkit-box-shadow: $box;
+    -o-box-shadow: $box;
+    -moz-box-shadow: $box;
+}
+
+.shadow {
+    @include box-shadow(3px 3px 1px #ddd, 7px 9px 7px #888)
+}
+
+@mixin style-for-iphone {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 454px) {
+        @content;
+    }
+}
+
+@include style-for-iphone {
+    font-size: 34%;
+}
+
+//在外面定义函数
+@function double($width) {
+    @return $width * 2;
+}
+
+//rgb函数
+body {
+    $color1: rgb(33, 455, 33);
+    color: $color1;
+    background-color: rgba($color1, 0.5);
+    //变浅色和加深lighten（），darken（）
+    p {
+        color: darken($color1, 0.6);
+        background-color: lighten($color1, 0.1);
+        //长度，下标
+        z-index: str_length('iiiiii'); //长度
+        z-index: str-index('abcdes333', 'b'); //第几个的下标
+        //自定义函数
+        width: double(3px);
+    }
+}
+
+//@debug '我打印出来了';
+//@warn '我是警告';
+//@error '错误信息';
+//函数在cmd输出
+@function getint($play:default) {
+    //在里面找不到的就输出第一个
+    $zindexMap: (default: 1, mode: 300, dropdown: 999);
+    $zindex: 1;
+    //如果里面有这个键 map_has_key(obj,找里面的健有没有) 
+    @if map_has_key($zindexMap, $play) {
+        //得到他默认的第一个map_get(obj,的到里面的健对应的值，赋予变量)
+        $zindex: map_get($zindexMap, $play);
+    }
+    @return $zindex;
+}
+
+@debug getint('mode'); //寻找健，输出值
+//判断 循环 if for
+$qq:777;
+body.ind {
+    color: if($qq>675, blue, red);
+}
+
+@if $qq>500 {
+    span {
+        color: #666;
+    }
+}
+
+@else if $qq<100 {
+    p {
+        color: #ff0000;
+    }
+}
+
+@else {
+    p {
+        color: blue;
+    }
+}
+
+@for $i from 1 to 5 {
+    .span#{$i} {
+        width: 20% * $i;
+    }
+}
+
+$j:6;
+@while $j>0 {
+    .p#{$j} {
+        width: 20% * $j;
+    }
+    $j: $j - 3; //间隔几个
+}

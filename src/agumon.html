@@ -1,0 +1,297 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="stylesheets\main.css">-->
+    <link rel="stylesheet" type="text/css" href="framework\bootstrap.min.css">
+    <script type="text/javascript" src="framework/jquery.1.11.1.min.js"></script>
+    <script type="text/javascript" src="framework/bootstrap.min.js"></script>
+    <script type="text/javascript" src="framework/vue.js"></script>
+    <!--<script type="text/javascript" src="framework/vue.min.js"></script>-->
+
+    <script src="javascripts/agumon.js"></script>
+    <title>vuejs</title>
+    <style>
+        .completed {
+            color: chartreuse;
+            text-decoration: line-through;
+        }
+        
+        .green {
+            color: cadetblue;
+        }
+        
+        .red {
+            background: yellow;
+        }
+        
+        .blue {
+            color: cornflowerblue
+        }
+        
+        .late {
+            transform: translateX(-20px);
+            transition: transform .5s
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center page-header">表单事件</h2>
+        <form action="" role="form">
+            <div class="form-group">
+                <label for="username">名字</label>：
+                <input type="text" id="username" v-model="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="sex">性别</label>：
+                <input type="text" id="sex" v-model="sex" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="age">年龄</label>：
+                <input type="text" id="age" v-model="age" class="form-control">
+            </div>
+            <div class="form-group">
+
+                <input type="text" v-on:click="add()" class="btn btn-success btn-sm " value="确定">
+                <input type="text" class="btn btn-info btn-sm " value="重置">
+            </div>
+        </form>
+        <table class="table text-center">
+            <caption>信息表</caption>
+            <tr>
+                <th class="text-center">编号{{tablesDate}}</th>
+                <th class="text-center">名字</th>
+                <th class="text-center">岁数</th>
+                <th class="text-center">性别</th>
+                <th class="text-center">操作</th>
+            </tr>
+            <tbody>
+                <tr v-for="(item,index) in myData">
+                    <td>{{index}}</td>
+                    <td v-bind:class='{ "completed":styles.completed}'>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.sex}}</td>
+                    <td><button type="button" class="btn btn-danger btn-sm" data-toggle='modal' data-target='#layer' v-on:click="tabindex=index">删除</button>
+                        <!--改变按钮-->
+                        <button class="btn btn-success btn-sm " type="button" v-bind:class='[ styles.completed? "btn-danger":"btn-success"]' v-on:click="tooggleComletion(styles)">{{styles.completed? '取消':'发送'}}</button>
+                        <!--改变按钮-->
+                    </td>
+                </tr>
+                <tr v-show="myData.length!=0">
+                    <td colspan="5">
+                        <button type="button" v-on:click class="btn btn-danger" data-toggle='modal' data-target='#layer'>删除全部</button>
+                    </td>
+                </tr>
+                <tr v-show="myData.length==0">
+                    <td colspan="5" class="text-muted text-center">
+                        <p>没有任何数据....</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--弹出框 data-dismiss="modal"  关闭 -->
+        <!--背景色-->
+        <div class="modal fade" tabindex="-1" role="dialog" id="layer">
+            <div class="modal-dialog" role="document">
+                <!--弹出框的内容-->
+                <div class="modal-content">
+                    <!--头部-->
+                    <div class="modal-header">
+                        <!--关闭按钮-->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <!--标题-->
+                        <h4 class="modal-title">确定删除吗？</h4>
+                    </div>
+                    <!--内容-->
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <!--确定取消按钮-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" v-on:click="deleteMsg(tabindex)" data-dismiss="modal">Save </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!--弹出框-->
+
+
+        <!--单选框-->
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+        <!--单选框-->
+
+
+        <!--复选框-->
+        <div>
+            <h2 class="text-center page-header">复选框</h2>
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">{{ checked }}</label>
+        </div>
+        <div>
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+            <label for="john">John</label>
+            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+            <label for="mike">Mike</label>
+            <br>
+            <span>Checked names: {{ checkedNames }}</span>
+        </div>
+        <!--复选框-->
+
+
+        <!--文本输入框-->
+        <h2 class="text-center page-header">文本输入框</h2>
+        <p style="white-space: pre">{{ message }}</p>
+        <br>
+        <textarea v-model="message" class="form-control" rows="3" v-bind:style={} placeholder="add multiple lines"></textarea>
+        <!--文本输入框-->
+
+
+        <!--按键事件-->
+        <h2 class="text-center page-header">Event事件 </h2>
+        <input type="text" class="btn btn-success btn-xs" @click="btnEvent($event)" value="Event事件">
+        <p>{{xy}}</p>
+
+
+        <!--事件冒泡@click.stop-->
+        <h2 class=" text-center page-header ">事件冒泡</h2>
+        <!-- 阻止单击事件冒泡 -->
+        <a v-on:click.stop="doThis"></a>
+        <!-- 提交事件不再重载页面 -->
+        <form v-on:submit.prevent="onSubmit"></form>
+        <!-- 修饰符可以串联  -->
+        <a v-on:click.stop.prevent="doThat"></a>
+        <!-- 只有修饰符 -->
+        <form v-on:submit.prevent></form>
+        <!-- 添加事件侦听器时使用事件捕获模式 -->
+        <div v-on:click.capture="doThis">...</div>
+        <!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 -->
+        <div v-on:click.self="doThat">...</div>
+        <!-- 点击事件将只会触发一次 -->
+        <a v-on:click.once="doThis"></a>
+
+        <!--@click.stop="btn2() 在点击第一个上面增加事件冒泡-->
+        <div @click="btn1()">
+            <input type=" text " class="btn btn-info btn-xs " @click.stop="btn2()" value="阻止事件冒泡">
+        </div>
+
+        <!--
+            鼠标点击事件
+                @mousedown="startDrag" 
+                    @touchstart="startDrag"
+                @mousemove="onDrag" 
+                    @touchmove="onDrag"
+                @mouseup="stopDrag" 
+                    @touchend="stopDrag"
+                @mouseleave="stopDrag"
+        
+        -->
+
+
+        <!--
+            鼠标右键
+              @contextmenu
+            阻止鼠标右键事件
+              @contextmenu.prevent
+        -->
+        <h2 class=" text-center page-header ">鼠标右键</h2>
+        <input type=" text " class="btn btn-info btn-xs " @contextmenu="btn2()" value="鼠标右键">
+        <input type=" text " class="btn btn-info btn-xs " @contextmenu.prevent="btn2()" value="阻止鼠标右键事件">
+
+        <!--按键事件
+                指令
+                   v-model
+                按键事件
+                    @keyup
+                    @keydown
+                都是回车事件
+                    @keyup.13
+                    @keyup.enter
+                上下左右
+                    @keyup.up
+                    @keyup.down
+                    @keyup.left
+                    @keyup.right
+                    @keyup.enter
+                    @keyup.tab
+                    @keyup.delete (捕获 “删除” 和 “退格” 键)
+                    @keyup.esc
+                    @keyup.space
+                   
+            -->
+        <h2 class=" text-center page-header ">按键事件</h2>
+        <div class="form-group">
+            <label for="">按键事件keydown键值是{{showkeyCode}}</label>：
+            <input type="text" placeholder="按键事件keydown" @keydown="showkey($event)" v-model="showkeyCode" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">keyup.13键值是{{showkeyCode}}</label>：
+            <input type="text" placeholder="按键回车判断事件keyup.13" @keyup.13="showkey2()" v-model="showkeyCode" class="form-control">
+
+        </div>
+        <div class="form-group">
+            <label for="">keyup键值是{{showkeyCode}}</label>：
+            <input type="text" placeholder="按键事件keyup" @keyup="showkey($event)" v-model="showkeyCode" class="form-control">
+        </div>
+
+        <!--属性绑定
+          v-bind:src
+        简写
+            :src
+            :width
+            :title
+            :alt
+        特殊绑定
+            :class
+                .green 绑定下去 要通过data赋值
+                green 直接显示
+                {blue:true,red:false} false 不显示 json
+                [green,red]多个class 数组
+            :style
+                [blue,red] 需要在data创建变量赋值（驼峰）
+                json 变量  data里面写json格式 的样式一堆
+         -->
+        <h2 class=" text-center page-header ">属性绑定</h2>
+
+
+        <img v-bind:src="url" alt="">
+
+        <div style="width: 300px; height: 300px;border:1px solid red;overflow: hidden">
+            <img :src="url2" :alt="alt" :class="{late:latehide}" :width="w" :title="title" @mouseover='transitions()'>
+
+        </div>
+
+
+        <span :class='{blue:true}'>呵呵呵</span>
+        <span :class='green'>哈哈哈</span>
+        <span :class='[green,red]'>哈哈哈</span>
+
+        <h2 class=" text-center page-header ">数据绑定</h2>
+
+        <div class="form-group">
+            <label for="">数据绑定:{{title}}</label>：
+            <input type="text" v-model="title"> {{'hello'}}
+        </div>
+        <div style="height: 3000px;"></div>
+    </div>
+</body>
+
+
+</html>

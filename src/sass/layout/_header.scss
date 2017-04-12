@@ -1,0 +1,44 @@
+.fsNav {
+    background-color: #f8f8f8;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    position: relative;
+    z-index: 290;
+    font-size: rem(12);
+    .fsWidth {
+        width: 1190px;
+        margin: 0 auto;
+        .fsNavList {
+            @include span(6);
+            li {
+                padding: 0 8px;
+                float: left;
+                line-height: 28px;
+                .fsMyHome {
+                    position: relative;
+                    border: 1px solid #f8f8f8;
+                    height: 28px;
+                    a {
+                        height: 28px;
+                    }
+                    ol {
+                        &.fsDropdown {
+                            width: 68px;
+                            line-height: 22px;
+                            padding: 1px 10px 10px;
+                            z-index: 100;
+                            position: absolute;
+                            top: 28px;
+                            left: -1px;
+                            background-color: #fff;
+                            border: 1px solid #eaeaea;
+                            display: none;
+                            border-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
