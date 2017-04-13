@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="framework/font-awesome.min.css">
+    <link rel="stylesheet" href="framework/css/font-awesome.min.css">
     <script type="text/javascript" src="framework/jquery.1.11.1.min.js"></script>
     <link rel="stylesheet" href="stylesheets\main.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +14,7 @@
     <header class="fsNav">
     <nav class="fsWidth">
         <ul class="fsNavList">
-            <li><i class="fa fa-camera-retro"></i> <span>广州</span> </li>
+            <li><i class="fa fa-map-marker"></i> <span>广州</span> </li>
             <li>
                 <div><a href="">[切换]</a></div>
             </li>
@@ -22,8 +22,9 @@
             <li><a href="">免费注册</a></li>
         </ul>
         <ul class="fsNavList">
+            <!--我的信息-->
             <li class="fsMyHome fore ">
-                <a class="drop-title" href="" target="_blank">我的美乐乐<i class="fa fa-camera-retro"></i> </a>
+                <a class="drop-title" href="" target="_blank">我的美乐乐<i class="fa fa-angle-down"></i> </a>
                 <ol class="fsDropdown homeSelf">
                     <li><a href="" target="_blank">我的订单</a>
                     </li>
@@ -39,8 +40,11 @@
                     </li>
                 </ol>
             </li>
+            <!--我的信息 over-->
+
+            <!--购物车-->
             <li id="fsMyCart" class="fsMyCart fore">
-                <a class="drop-title" href="/flow/?step=cart&amp;rel=header" target="_blank"><i class="i-cart"></i><span class="cart-word">购物车<span id="JS_cart_num" class="cart-count">0</span></span><i class="drop-arrow"></i></a>
+                <a class="drop-title" href="" target="_blank"><i class="fa fa-shopping-cart fsCart"></i><span class="cart-word">购物车<span id="cart_num" class="cart-count">0</span></span><i class="drop-arrow"></i></a>
                 <div id="fsMyCartBox" class="fsMyCartBox fsDropdown">
                     <ul id="fsMyCartList" class="fsMyCartList">
                         <li class="cartList_index_0" data-num="1" data-rec_id="27051715" data-index="0">
@@ -60,12 +64,15 @@
                     <div id="fsCountArea" class="fsCountArea none shopcart-count">
                         <p class="count-area">共<span id="JS_cart_count">0</span>件商品，共计<strong id="JS_count_total" class="count-total red">¥00.00</strong>
                         </p>
-                        <a class="count-btn" target="_blank" href="/flow/?step=cart&amp;rel=header">去购物车结算</a>
+                        <a class="count-btn" target="_blank" href="">去购物车结算</a>
                     </div>
                 </div>
             </li>
+            <!--购物车 over-->
+
+            <!--二维码-->
             <li class="fore">
-                <a class="drop-title" href="" target="_blank"><i class="i-scan"></i><span class="scan-word">关注美乐乐</span><i class="drop-arrow"></i></a>
+                <a class="drop-title" href="" target="_blank"><i class="fa fa-qrcode fsCart"></i><span class="scan-word">关注美乐乐</span><i class="fa fa-angle-down "></i></a>
                 <ul class="fsDropdown fsGaerCode">
                     <li>
                         <a href="javascript:;" target="_blank">
@@ -76,19 +83,27 @@
                     </li>
                 </ul>
             </li>
-            <li class="fore">
-                <a class="drop-title" href="" target="_blank">帮助中心<i class="drop-arrow" target="_blank"></i></a>
-                <ul class="dropdown help-center">
+            <!--二维码 over-->
+
+            <!--帮助中心-->
+            <li class="fsHelp fore">
+                <a class="" href="" target="_blank">帮助中心&nbsp;<i class="fa fa-angle-down"></i></a>
+                <ol class="fsDropdown fsHelpSelf">
                     <li><a href="" target="_blank">购买流程</a>
                     </li>
-                    <li><a href="javascript:;">在线帮助</a>
+                    <li><a href="" target="_blank">在线帮助</a>
                     </li>
                     <li><a href="" target="_blank">企业采购</a>
                     </li>
-                </ul>
+                </ol>
             </li>
-            <li class="fl banner">
-                <a href="javascript:;" onclick="shoucang()">收藏本站</a>
+            <!--帮助中心 over-->
+
+            <li class="fore">
+                <a href="javascript:;">收藏本站</a>
+            </li>
+            <li class="fore">
+                <a href="javascript:;">全国热线：400 0098666</a>
             </li>
 
         </ul>
@@ -97,24 +112,73 @@
 </header>
 
 <script>
-    $('.fsMyHome').hover(function() {
-        $('.homeSelf').show()
-    }, function() {
-        $('.homeSelf').hide()
+    $(function() {
+        head.init()
     })
-    $('.fsMyCart').hover(function() {
-        $('.fsMyCartBox').show()
-    }, function() {
-        $('.fsMyCartBox').hide()
-    })
-    $('.fsNavList>li').hover(function() {
-        $(this).addClass('hover')
-    }, function() {
-        $(this).removeClass('hover')
-    })
-</script>
+    let head = {
+        init() {
+            // nav
+            $('.fsNavList>li').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+            head.show($('.fsMyHome'), $('.homeSelf'));
+            head.show($('.fsHelp'), $('.fsHelpSelf'));
+            head.show($('.fsMyCart'), $('.fsMyCartBox'));
+            // 登录跳转
+            // 注册跳转
+        },
+        show(obj, obj2) {
+            obj.hover(function() {
+                obj2.show()
+            }, function() {
+                obj2.hide()
+            })
+        },
+        loginUrl() { // 登录跳转
 
-    <div></div>
+        },
+        signUp() { // 注册跳转
+
+        }
+    }
+</script>
+    <!--search-->
+    <section>
+        <div class="fsSearchBox">
+            <div>
+                <a href=""><img src="" alt="" width="193" height="61"></a>
+            </div>
+            <div>
+                <a href=""><img src="" alt="" width="193" height="61"></a>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <!--search-->
+    <!--nav-->
+    <section>
+
+    </section>
+    <!--nav-->
+    <!--banner-->
+    <section>
+
+    </section>
+    <!--banner-->
+    <!--促销-->
+    <section>
+
+    </section>
+    <!--促销-->
+    <!--楼梯-->
+    <section>
+
+    </section>
+    <!--楼梯-->
+
     <h1>这是 footer 的内容</h1>
 </body>
 

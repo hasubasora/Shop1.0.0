@@ -13,7 +13,7 @@
         width: 1190px;
         margin: 0 auto;
         .fsNavList {
-            @include span(6);
+            @include span(5);
             li {
                 padding: 0 8px;
                 float: left;
@@ -23,18 +23,25 @@
                     border: 1px solid #f8f8f8;
                     height: 28px
                 }
+                // myhome
                 &.fsMyHome {
+                    width: 92px;
+                    text-align: center;
                     a {
                         height: 28px;
                     }
                     ol {
                         &.homeSelf {
-                            width: 86px;
+                            width: 92px;
                             line-height: 22px;
                             padding: 1px 10px 10px;
+                            li {
+                                padding: 0 9px;
+                            }
                         }
                     }
                 }
+                // mycart
                 &.fsMyCart {
                     .drop-title {
                         position: relative;
@@ -104,17 +111,49 @@
                     padding: 14px 22px;
                     text-align: center;
                 }
-                &.hover {
-                    background: #fff;
-                    border: 1px solid #eaeaea;
-                    border-bottom: 1px solid #fff;
-                }
                 &:hover .fsGaerCode {
                     display: block;
+                }
+                &.fsHelp {
+                    width: 92px;
+                    text-align: center;
+                    a {
+                        height: 28px;
+                    }
+                    ol {
+                        &.fsHelpSelf {
+                            width: 92px;
+                            line-height: 22px;
+                            padding: 1px 10px 10px;
+                            li {
+                                padding: 0 9px;
+                            }
+                        }
+                    }
+                }
+            }
+            // left ul
+            &:nth-child(2) {
+                @include span(7);
+                li {
+                    &.hover {
+                        background: #fff;
+                        border: 1px solid #eaeaea;
+                        border-bottom: 1px solid #fff;
+                        i[class*=fa-angle-down] {
+                            transform: rotate(-180deg);
+                        }
+                    }
                 }
             }
         }
     }
+}
+
+[class*=fa-angle-down] {
+    transition: .2s ease-in-out;
+    transform-origin: 7px;
+    padding-left: 3px;
 }
 
 // list
@@ -127,4 +166,11 @@
     border: 1px solid #eaeaea;
     display: none;
     border-top: 0;
+}
+
+.fsCart {
+    color: #cf000e;
+    font-size: 16px;
+    padding: 0 5px;
+    vertical-align: text-bottom;
 }
