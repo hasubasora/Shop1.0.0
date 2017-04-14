@@ -23,7 +23,9 @@
 
 /*! Component */
 
-@import // "components/mode",
+@import "components/banner",
 "components/nav",
 "components/search",
+"components/activity",
+"components/floor",
 "components/tables";

@@ -1,0 +1,62 @@
+section {
+    outline: 1px saddlebrown solid;
+    @include span(12);
+    .fsSearchBox {
+        width: 1190px;
+        margin: 0 auto;
+        padding: 29px 0;
+        @include clearfix;
+        .fsLogo {
+            @include span(2.5);
+            img {
+                margin: 0 auto;
+            }
+        }
+        .fsAd {
+            @include span(2.5);
+            img {
+                margin: 0 auto;
+            }
+        }
+        .fsSearchInput {
+            @include span(5);
+            .fsGroupInput {
+                @include clearfix;
+                border: 3px solid nth($sc, 1);
+                input[type=text] {
+                    @include span(9.5);
+                    height: 30px;
+                    border: 0;
+                    outline: 0;
+                }
+                input[type=button] {
+                    height: 30px;
+                    @include span(2.5);
+                    background: nth($sc, 1);
+                    color: #fff;
+                    font-size: 20px;
+                }
+            }
+            .fsKeyInput {
+                a {
+                    padding: 10px 5px 0;
+                    float: left;
+                    color: #999;
+                    font-size: 14px;
+                    &:hover {
+                        color: nth($sc, 1);
+                    }
+                }
+            }
+        }
+        .cq {
+            @include span(2);
+            position: relative;
+            >img {
+                position: absolute;
+                left: 79px;
+                top: -10px;
+            }
+        }
+    }
+}

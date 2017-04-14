@@ -150,8 +150,6 @@ html *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
 }
 
 html i,
@@ -371,13 +369,307 @@ img {
 }
 
 /*! Component */
+.fsBanner {
+  outline: 1px solid red;
+}
+.fsBanner .fsBannerCenter li .fsBannerContent {
+  position: relative;
+  -webkit-filter: inherit;
+  filter: inherit;
+  width: 1190px;
+  height: 460px;
+  margin: 0 auto;
+}
+
+section nav.fsNavBox {
+  width: 1190px;
+  margin: 0 auto;
+}
+section nav.fsNavBox .fsNavH {
+  background: #cf000e;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  position: relative;
+  z-index: 32;
+  float: left;
+}
+section nav.fsNavBox .fsNavH h2 {
+  background: #cf000e;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo {
+  padding-top: 5px;
+  height: 460px;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  padding: 12px 15px;
+  color: #fff;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li > a {
+  font-size: 14px;
+  color: #fff;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover {
+  background: rgba(248, 248, 248, 0.9);
+  padding-left: 20px;
+  color: #000;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover > a {
+  color: #000;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover .fsSub {
+  opacity: 1;
+  display: block;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub {
+  width: 750px;
+  overflow: hidden;
+  display: none;
+  height: 460px;
+  padding: 9px 30px 25px 15px;
+  left: 200px;
+  top: 0;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  _background: #fff;
+  z-index: 10000;
+  position: absolute;
+  line-height: 20px;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL {
+  width: 70.83333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup {
+  *zoom: 1;
+  padding-top: 16px;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:before, section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:after {
+  content: "";
+  display: table;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:after {
+  clear: both;
+  overflow: hidden;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li a {
+  color: #000;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubTitle {
+  width: 25%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  font-size: 13px;
+  font-weight: bold;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubTitle i {
+  padding: 5px;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubCont {
+  width: 75%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  font-size: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px dotted #afacb1;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubCont a {
+  margin-right: 16px;
+  display: inline-block;
+  color: #666 !important;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR {
+  width: 29.16667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR h6 {
+  color: #000 !important;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR .tag {
+  margin-bottom: 25px;
+  font-size: 12px;
+  height: 88px;
+  overflow: hidden;
+}
+section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR .tag a {
+  margin-right: 16px;
+  display: inline-block;
+  color: #666 !important;
+  line-height: 22px;
+}
+section nav.fsNavBox .fsNavList {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  *zoom: 1;
+}
+section nav.fsNavBox .fsNavList li {
+  padding-left: 35px;
+  cursor: pointer;
+  float: left;
+}
+section nav.fsNavBox .fsNavList li.hover {
+  color: #cf000e;
+}
+section nav.fsNavBox .fsNavList:before, section nav.fsNavBox .fsNavList:after {
+  content: "";
+  display: table;
+}
+section nav.fsNavBox .fsNavList:after {
+  clear: both;
+  overflow: hidden;
+}
+
 section {
   outline: 1px saddlebrown solid;
-  height: 500px;
   width: 100%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+}
+section .fsSearchBox {
+  width: 1190px;
+  margin: 0 auto;
+  padding: 29px 0;
+  *zoom: 1;
+}
+section .fsSearchBox:before, section .fsSearchBox:after {
+  content: "";
+  display: table;
+}
+section .fsSearchBox:after {
+  clear: both;
+  overflow: hidden;
+}
+section .fsSearchBox .fsLogo {
+  width: 20.83333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+section .fsSearchBox .fsLogo img {
+  margin: 0 auto;
+}
+section .fsSearchBox .fsAd {
+  width: 20.83333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+section .fsSearchBox .fsAd img {
+  margin: 0 auto;
+}
+section .fsSearchBox .fsSearchInput {
+  width: 41.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+section .fsSearchBox .fsSearchInput .fsGroupInput {
+  *zoom: 1;
+  border: 3px solid #cf000e;
+}
+section .fsSearchBox .fsSearchInput .fsGroupInput:before, section .fsSearchBox .fsSearchInput .fsGroupInput:after {
+  content: "";
+  display: table;
+}
+section .fsSearchBox .fsSearchInput .fsGroupInput:after {
+  clear: both;
+  overflow: hidden;
+}
+section .fsSearchBox .fsSearchInput .fsGroupInput input[type=text] {
+  width: 79.16667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  height: 30px;
+  border: 0;
+  outline: 0;
+}
+section .fsSearchBox .fsSearchInput .fsGroupInput input[type=button] {
+  height: 30px;
+  width: 20.83333%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  background: #cf000e;
+  color: #fff;
+  font-size: 20px;
+}
+section .fsSearchBox .fsSearchInput .fsKeyInput a {
+  padding: 10px 5px 0;
+  float: left;
+  color: #999;
+  font-size: 14px;
+}
+section .fsSearchBox .fsSearchInput .fsKeyInput a:hover {
+  color: #cf000e;
+}
+section .fsSearchBox .cq {
+  width: 16.66667%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  position: relative;
+}
+section .fsSearchBox .cq > img {
+  position: absolute;
+  left: 79px;
+  top: -10px;
+}
+
+.fsTabsBox {
+  margin-top: 20px;
+  width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fsTabsBox .fsTabs {
+  position: relative;
+  width: 290px;
+  height: 150px;
+  margin-right: 10px;
+  overflow: hidden;
+  float: left;
+}
+.fsTabsBox .fsTabs:nth-last-of-type(1) {
+  margin-right: 0 !important;
+}
+.fsTabsBox .fsTabs .word {
+  position: absolute;
+  font-size: 14px;
+  left: 20px;
+  top: 18px;
+  z-index: 2;
+}
+.fsTabsBox .fsTabs .word p {
+  font-size: 22px;
+}
+
+.fsFloorBox {
+  width: 1190px;
+  margin: 0 auto;
 }
 
 .fs-table {

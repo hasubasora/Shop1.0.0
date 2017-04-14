@@ -99,7 +99,7 @@
                             color: #999;
                             margin: 0 2px 0 4px;
                             a {
-                                background-color: #cf000e;
+                                background-color: nth($sc, 1);
                                 display: inline-block;
                                 color: #fff;
                                 padding: 0 10px;
@@ -169,7 +169,7 @@
 }
 
 .fsCart {
-    color: #cf000e;
+    color: nth($sc, 1);
     font-size: 16px;
     padding: 0 5px;
     vertical-align: text-bottom;

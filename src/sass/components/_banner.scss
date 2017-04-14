@@ -1,0 +1,16 @@
+.fsBanner {
+    @include outline;
+    .bannerTop {}
+    .fsBannerCenter {
+        li {
+            .fsBannerContent {
+                position: relative;
+                filter: inherit;
+                width: 1190px;
+                height: 460px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .fsBannerFot {}
+}
