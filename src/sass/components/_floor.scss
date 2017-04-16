@@ -1,4 +1,246 @@
 .fsFloorBox {
-    width: 1190px;
-    margin: 0 auto;
+    width: nth($size, 1);
+    margin: 40px auto 0;
+    .fsFloorTitle {
+        border-bottom: 1px solid #333;
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            text-align: left;
+            width: 256px;
+            line-height: 16px;
+            padding: 4px 0 12px;
+            float: left;
+        }
+        #fsFloorNav1 {
+            float: left;
+            li {
+                float: left;
+                line-height: 14px;
+                font-size: 14px;
+                border-bottom: 2px solid #fff;
+                margin-right: 35px;
+                padding: 8px 3px;
+                cursor: pointer;
+                color: #666;
+            }
+        }
+        .fsFloorNavR {
+            float: right;
+            a {
+                line-height: 32px;
+                margin-right: 24px;
+                color: #666;
+            }
+        }
+        @include clearfix;
+    }
+    .fsFloorCont {
+        position: relative;
+        @include clearfix;
+        .floorContLeft {
+            height: 750px;
+            float: left;
+            width: 254px;
+            background: #fcfcfc;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            .aImg {
+                .brand-title {
+                    position: absolute;
+                    font-size: 22px;
+                    color: #fff;
+                    top: 22px;
+                    left: 20px;
+                }
+                .brand-subtitle {
+                    position: absolute;
+                    font-size: 15px;
+                    color: #fff;
+                    top: 52px;
+                    left: 20px;
+                }
+                .brand-btn {
+                    position: absolute;
+                    font-size: 12px;
+                    display: inline-block;
+                    color: #fff;
+                    top: 80px;
+                    left: 20px;
+                    border: 1px solid #fff;
+                    padding: 2px 7px;
+                }
+            }
+            .aTag {
+                padding: 35px 0 0 16px;
+                height: 182px;
+                overflow: hidden;
+                text-align: center;
+                a {
+                    padding-right: 12px;
+                    width: 65px;
+                    line-height: 28px;
+                    overflow: hidden;
+                    height: 28px;
+                    color: #666;
+                    font-size: 13px;
+                    text-align: left;
+                    display: inline-block;
+                }
+            }
+            .ad {
+                text-align: center;
+                padding: 20px 0 12px;
+                width: 254px;
+                a {
+                    display: inline-block;
+                    border-right: 1px solid #f5f5f5;
+                    border-bottom: 1px solid #f5f5f5;
+                    img {
+                        overflow: hidden;
+                        background: #fff;
+                        vertical-align: top;
+                        width: 115px;
+                        height: 74px;
+                    }
+                }
+            }
+        }
+        .floorContRight {
+            width: 1204px;
+            height: 750px;
+            float: right;
+        }
+    }
+}
+
+// mini banner
+.scroll-bar {
+    width: 621px;
+    height: 449px;
+    position: relative;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    float: left;
+    .content {
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+        bottom: 32px;
+        a {
+            .content-banner {
+                text-align: center;
+                margin: 0 auto;
+                width: 245px;
+                height: 90px;
+                background: #fff;
+                background: rgba(255, 255, 255, .8);
+                _background: #fff;
+                filter: alpha(opacity=80);
+                .txt-l {
+                    display: inline-block;
+                    font-size: 20px;
+                    color: #000;
+                    padding: 16px 2px 4px;
+                    border-bottom: 1px dotted #000;
+                }
+                .txt-s {
+                    font-size: 13px;
+                    color: #333;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .fsBanNav {
+        position: absolute;
+        width: 100%;
+        z-index: 21;
+        bottom: 8px;
+        .lisBanner {
+            margin: 0 auto;
+            width: 64px;
+            a {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                opacity: .8;
+                background: #fff;
+                display: inline-block;
+                margin: 0 4px;
+                opacity: .6;
+                &.hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.floor-bar {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    float: left;
+    >ul {
+        bottom: 18px;
+        position: absolute;
+        line-height: 18px;
+        left: 20px;
+        li {
+            &.name {
+                a {
+                    font-size: 13px;
+                    color: #222;
+                    display: block;
+                    width: 100%;
+                }
+            }
+            &.tips {
+                a {
+                    font-size: 12px;
+                    color: #aaa;
+                    line-height: 18px;
+                    display: block;
+                    width: 100%;
+                }
+            }
+            &.prize {
+                a {
+                    font-size: 13px;
+                    color: #666;
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.s1 {
+    width: 290px;
+    height: 449px;
+}
+
+.s2 {
+    width: 290px;
+    height: 224px;
+}
+
+.s4,
+.s5 {
+    width: 310px;
+    height: 300px;
+}
+
+.s7,
+.s6 {
+    width: 290px;
+    height: 300px;
+}
+
+.fl {
+    float: left;
 }

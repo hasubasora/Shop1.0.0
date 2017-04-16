@@ -1,13 +1,14 @@
 .fsTabsBox {
+    height: 185px;
     margin-top: 20px;
-    width: 1190px;
+    width: nth($size, 1);
     margin-left: auto;
     margin-right: auto;
     .fsTabs {
         position: relative;
-        width: 290px;
-        height: 150px;
-        margin-right: 10px;
+        width: 356px;
+        height: 184px;
+        margin-right: 12px;
         overflow: hidden;
         float: left;
         &:nth-last-of-type(1) {

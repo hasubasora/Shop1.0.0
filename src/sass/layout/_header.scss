@@ -10,10 +10,10 @@
     z-index: 290;
     font-size: rem(12);
     .fsWidth {
-        width: 1190px;
+        width: nth($size, 1);
         margin: 0 auto;
         .fsNavList {
-            @include span(5);
+            @include span(6);
             li {
                 padding: 0 8px;
                 float: left;
@@ -134,7 +134,7 @@
             }
             // left ul
             &:nth-child(2) {
-                @include span(7);
+                @include span(6);
                 li {
                     &.hover {
                         background: #fff;

@@ -1,16 +1,82 @@
 .fsBanner {
-    @include outline;
-    .bannerTop {}
+    background: rgb(237, 84, 6);
+    position: relative;
+    .bannerTop {
+        width: nth($size, 1);
+        margin: 0 auto;
+        position: relative;
+        .topCont {
+            position: absolute;
+            width: 180px;
+            height: 400px;
+            right: 0;
+            top: 30px;
+            z-index: 200;
+            background: rgba(255, 255, 255, .8);
+            .word {
+                text-align: center;
+                font-size: 15px;
+                margin-top: 40px;
+                margin-bottom: 32px;
+                p {
+                    color: #333;
+                    font-size: 14px;
+                    span {
+                        color: #cf000e;
+                        font-size: 20px;
+                    }
+                }
+            }
+            a {
+                .pavilio {
+                    background: url('http://image.meilele.com/images/common/site/site.png') -92px -237px no-repeat;
+                    _background: url('http://image.meilele.com/images/common/site/site.png') -92px -237px no-repeat;
+                    width: 151px;
+                    height: 151px;
+                    margin: 0 auto 42px;
+                    text-align: center;
+                    font-size: 15px;
+                    p {
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding-top: 25px;
+                        color: #444;
+                        position: relative;
+                    }
+                    span {
+                        color: #444;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .expr-btn {
+                display: block;
+                width: 132px;
+                height: 30px;
+                margin: 0 auto;
+                background: url('http://image.meilele.com/images/common/site/site.png') -92px -142px no-repeat;
+                _background: url('http://image.meilele.com/images/common/site/site.gif') -92px -142px no-repeat;
+            }
+            .expr-word {
+                width: 136px;
+                height: 16px;
+                background: url('http://image.meilele.com/images/common/site/site.png') -92px -107px no-repeat;
+                _background: url('http://image.meilele.com/images/common/site/site.gif') -92px -107px no-repeat;
+                margin: 10px auto 0;
+            }
+        }
+    }
     .fsBannerCenter {
         li {
             .fsBannerContent {
                 position: relative;
                 filter: inherit;
-                width: 1190px;
+                width: nth($size, 1);
                 height: 460px;
                 margin: 0 auto;
             }
         }
     }
+    @include outline(blue);
     .fsBannerFot {}
 }

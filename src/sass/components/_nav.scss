@@ -1,8 +1,9 @@
 section {
     nav {
         &.fsNavBox {
-            width: 1190px;
+            width: nth($size, 1);
             margin: 0 auto;
+            height: 36px;
             .fsNavH {
                 //h2
                 background: nth($sc, 1);
