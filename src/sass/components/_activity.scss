@@ -21,9 +21,6 @@
             transform: translateX(-5px);
         }
         img {
-            width: 295px;
-            height: 184px;
-            @include wh(295px, 184px);
             position: relative;
             right: 0;
             transition: .2s ease-in-out;

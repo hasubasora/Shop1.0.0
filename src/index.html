@@ -398,7 +398,7 @@
                     <!--banner-->
                     <div class="scroll-bar  fl">
                         <!--描述-->
-                        <div class="content" style="opacity: 0.152044;">
+                        <div class="content">
                             <a href="" target="_blank" title="进口芬兰松双层童床">
                                 <div class="content-banner">
                                     <span class="txt-l">童话木居生活</span>
@@ -406,7 +406,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="content" style="opacity: 0.847956;">
+                        <div class="content">
                             <a href="" target="_blank" title="进口新西兰松木儿童城堡床">
                                 <div class="content-banner">
                                     <span class="txt-l">用料天然 健康环保</span>
@@ -414,7 +414,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="content" style="opacity: 0;">
+                        <div class="content">
                             <a href="" target="_blank" title="3D环保椰棕护脊床垫">
                                 <div class="content-banner">
                                     <span class="txt-l">助力宝宝健康睡眠</span>
@@ -425,13 +425,12 @@
                         <!--banner小点-->
                         <div class="fsBanNav">
                             <div class="lisBanner">
-                                <!--<a href="javascript:;" target="_blank" class=""></a>
-                                <a href="javascript:;" target="_blank" class="hover"></a>
-                                <a href="javascript:;" target="_blank" class=""></a>-->
+                                <!--<a href="javascript:;" target="_blank" class=""></a>-->
+
                             </div>
                         </div>
                         <!--banner图-->
-                        <ul class="floorBanner">
+                        <ul class="floorBanner" id="floorBanner">
                             <li class="">
                                 <a href="" target="_blank" title="进口芬兰松双层童床"><img src="http://img003.mllres.com/images/201611/1479092296611347046.jpg" data-src="http://img003.mllres.com/images/201611/1479092296611347046.jpg" alt="进口芬兰松双层童床" style="opacity: 1;"></a>
                             </li>
@@ -630,38 +629,51 @@
                 _index = $(this).index()
                 $(this).addClass('hover').siblings().removeClass('hover');
                 $('.floorContRight').eq(_index).removeClass('none').siblings('.floorContRight').addClass('none');
-                let banLen = $('.floorBanner>li').length;
-                var _html = "";
-                for (var i = 0; i < banLen.length; i++) {
-                    _html += "<li></li>"
-                    alert(banLen)
 
-                }
-                $(".lisBanner").html(_html);
             })
 
+            let banLen = $('#floorBanner>li').length;
+            var _html = "";
+            for (var i = 0; i < banLen; i++) {
+                _html += "<a href='javascript:void(0)'></a>"
+            }
+            $(".lisBanner").html(_html);
 
+            var timeStop = null;
+            var _index = 0;
+            autoPlay();
+            $(".lisBanner a").hover(function() {
+                clearInterval(timeStop);
+                _index = $(this).index();
+                allPlay()
+            }, function() {
+                autoPlay()
+            });
+
+            function autoPlay() {
+                timeStop = setInterval(function() {
+                    _index++;
+                    if (_index == $(".lisBanner a").length) {
+                        _index = 0;
+                    }
+                    allPlay()
+                }, 2000);
+            }
+
+
+            //all
+            function allPlay() {
+                $(".lisBanner a").eq(_index).addClass("hover").siblings().removeClass("hover");
+                $('#floorBanner li').eq(_index).fadeIn(500).siblings('li').fadeOut(500);
+                $('.content').eq(_index).fadeIn(500).siblings('.content').fadeOut(500);
+
+            }
         },
         config: {
 
         },
 
-        autoPlay() {
-            timeStop = setInterval(function() {
-                _index++;
-                if (_index == obj.length) {
-                    _index = 0;
-                }
-            }, 2000);
-        },
 
-        //all
-        allPlay() {
-            obj.eq(_index).addClass("hover").siblings().removeClass("hover");
-            objScroll.animate({
-                left: _index * -450
-            }, 200)
-        }
 
     }
 </script>

@@ -60,8 +60,6 @@
                 _background: url('http://image.meilele.com/images/common/site/site.gif') -92px -142px no-repeat;
             }
             .expr-word {
-                width: 136px;
-                height: 16px;
                 @include wh(136px,
                 16px);
                 background: url('http://image.meilele.com/images/common/site/site.png') -92px -107px no-repeat;
@@ -78,6 +76,11 @@
                 width: nth($size, 1);
                 height: 460px;
                 margin: 0 auto;
+                a {
+                    img {
+                        margin: 0 auto;
+                    }
+                }
             }
         }
     }

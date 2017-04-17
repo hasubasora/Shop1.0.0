@@ -54,7 +54,7 @@
             float: left;
             @include wh(254px, 750px);
             @include breakpoint($big) {
-                @include wh(210px, 609px);
+                @include wh(210px, 610px);
             }
             background: #fcfcfc;
             border-left: 1px solid #eee;
@@ -144,9 +144,9 @@
 
 // mini banner
 .scroll-bar {
-    @include wh(621px, 449px);
+    @include wh(621px, 450px);
     @include breakpoint($big) {
-        @include wh(505px, 365px);
+        @include wh(505px, 366px);
     }
     position: relative;
     border-right: 1px solid #eee;
@@ -158,6 +158,7 @@
         width: 100%;
         z-index: 20;
         bottom: 32px;
+        @include opacity(0.8);
         a {
             .content-banner {
                 text-align: center;
@@ -256,14 +257,14 @@
 }
 
 .s1 {
-    @include wh(290px, 449px);
+    @include wh(290px, 450px);
     @include breakpoint($big) {
-        @include wh( 236px, 367px);
+        @include wh( 236px, 366px);
     }
 }
 
 .s2 {
-    @include wh(290px, 224px);
+    @include wh(291px, 225px);
     @include breakpoint($big) {
         @include wh( 237px, 183px);
     }
@@ -279,7 +280,7 @@
 
 .s7,
 .s6 {
-    @include wh(290px, 300px);
+    @include wh(291px, 300px);
     @include breakpoint($big) {
         @include wh( 237px, 244px);
     }

@@ -17,6 +17,9 @@
         margin: 0 auto;
         .fsNavList {
             @include span(6);
+            @include breakpoint($big) {
+                @include span(5);
+            }
             li {
                 padding: 0 8px;
                 float: left;
@@ -138,6 +141,9 @@
             // left ul
             &:nth-child(2) {
                 @include span(6);
+                @include breakpoint($big) {
+                    @include span(7);
+                }
                 li {
                     &.hover {
                         background: #fff;
