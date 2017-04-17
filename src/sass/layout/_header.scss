@@ -11,6 +11,9 @@
     font-size: rem(12);
     .fsWidth {
         width: nth($size, 1);
+        @include breakpoint($big) {
+            width: nth($size, 2);
+        }
         margin: 0 auto;
         .fsNavList {
             @include span(6);

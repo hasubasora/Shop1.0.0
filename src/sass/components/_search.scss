@@ -1,5 +1,8 @@
 .fsSearchBox {
     width: nth($size, 1);
+    @include breakpoint($big) {
+        width: nth($size, 2);
+    }
     margin: 0 auto;
     padding: 29px 0;
     @include clearfix;

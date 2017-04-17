@@ -1,5 +1,8 @@
 .fsFloorBox {
     width: nth($size, 1);
+    @include breakpoint($big) {
+        width: nth($size, 2);
+    }
     margin: 40px auto 0;
     .fsFloorTitle {
         border-bottom: 1px solid #333;
@@ -11,6 +14,9 @@
             line-height: 16px;
             padding: 4px 0 12px;
             float: left;
+            @include breakpoint($big) {
+                width: 210px;
+            }
         }
         #fsFloorNav1 {
             float: left;
@@ -23,6 +29,12 @@
                 padding: 8px 3px;
                 cursor: pointer;
                 color: #666;
+                &.hover {
+                    font-size: 15px;
+                    font-weight: bold;
+                    border-bottom: 2px solid #222;
+                    color: #222;
+                }
             }
         }
         .fsFloorNavR {
@@ -39,12 +51,14 @@
         position: relative;
         @include clearfix;
         .floorContLeft {
-            height: 750px;
             float: left;
-            width: 254px;
+            @include wh(254px, 750px);
+            @include breakpoint($big) {
+                @include wh(210px, 609px);
+            }
             background: #fcfcfc;
             border-left: 1px solid #eee;
-            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
             .aImg {
                 .brand-title {
                     position: absolute;
@@ -70,12 +84,18 @@
                     border: 1px solid #fff;
                     padding: 2px 7px;
                 }
+                .floor-img {
+                    @include wh(100%, 287px);
+                }
             }
             .aTag {
                 padding: 35px 0 0 16px;
                 height: 182px;
+                @include breakpoint($big) {
+                    padding: 38px 0 0 30px;
+                    height: 163px;
+                }
                 overflow: hidden;
-                text-align: center;
                 a {
                     padding-right: 12px;
                     width: 65px;
@@ -92,6 +112,10 @@
                 text-align: center;
                 padding: 20px 0 12px;
                 width: 254px;
+                @include breakpoint($big) {
+                    width: 210px;
+                    padding: 22px 0 14px;
+                }
                 a {
                     display: inline-block;
                     border-right: 1px solid #f5f5f5;
@@ -100,24 +124,30 @@
                         overflow: hidden;
                         background: #fff;
                         vertical-align: top;
-                        width: 115px;
-                        height: 74px;
+                        @include wh(115px, 74px);
+                        @include breakpoint($big) {
+                            @include wh(94px, 60px);
+                        }
                     }
                 }
             }
         }
         .floorContRight {
-            width: 1204px;
-            height: 750px;
-            float: right;
+            @include wh(1204px, 750px);
+            @include breakpoint($big) {
+                @include wh(979px, 609px);
+            }
+            float: left;
         }
     }
 }
 
 // mini banner
 .scroll-bar {
-    width: 621px;
-    height: 449px;
+    @include wh(621px, 449px);
+    @include breakpoint($big) {
+        @include wh(505px, 365px);
+    }
     position: relative;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -132,8 +162,7 @@
             .content-banner {
                 text-align: center;
                 margin: 0 auto;
-                width: 245px;
-                height: 90px;
+                @include wh(245px, 90px);
                 background: #fff;
                 background: rgba(255, 255, 255, .8);
                 _background: #fff;
@@ -184,6 +213,13 @@
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;
     float: left;
+    &:hover img {
+        transform: translateX(5px);
+    }
+    img {
+        width: 100%;
+        transition: .5s ease-out;
+    }
     >ul {
         bottom: 18px;
         position: absolute;
@@ -220,27 +256,39 @@
 }
 
 .s1 {
-    width: 290px;
-    height: 449px;
+    @include wh(290px, 449px);
+    @include breakpoint($big) {
+        @include wh( 236px, 365px);
+    }
 }
 
 .s2 {
-    width: 290px;
-    height: 224px;
+    @include wh(290px, 224px);
+    @include breakpoint($big) {
+        @include wh( 236px, 182px);
+    }
 }
 
 .s4,
 .s5 {
-    width: 310px;
-    height: 300px;
+    @include wh(310px, 300px);
+    @include breakpoint($big) {
+        @include wh( 252px, 244px);
+    }
 }
 
 .s7,
 .s6 {
-    width: 290px;
-    height: 300px;
+    @include wh(290px, 300px);
+    @include breakpoint($big) {
+        @include wh( 236px, 244px);
+    }
 }
 
 .fl {
     float: left;
+}
+
+.none {
+    display: none;
 }

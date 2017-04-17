@@ -27,13 +27,13 @@
     <div class="footer-index">
         <div class="footerWidth clearfix">
             <ul class="fl coverage">
-                <li class="map1">客服热线（8:00-23:00）</li>
-                <li class="map2">400-009-8666</li>
-                <li class="map3">美乐乐在全国实体店<span class="red">297</span>家、样板间<span class="red">1</span>家</li>
-                <li class="map4">
+                <li class="s1">客服热线（8:00-23:00）</li>
+                <li class="s2">400-009-8666</li>
+                <li class="s3">美乐乐在全国实体店<span class="red">297</span>家、样板间<span class="red">1</span>家</li>
+                <li class="s4">
                     <a href="/expr.html" target="_blank"><i class="i-coord"></i>查看全国实体店</a>
                 </li>
-                <li class="map5">
+                <li class="s5">
                     <a href="javascript:;" onclick="$.codeSms(false, {click: '版权'});return false;"><i class="i-mobile"></i>免费发送到手机</a>
                 </li>
             </ul>

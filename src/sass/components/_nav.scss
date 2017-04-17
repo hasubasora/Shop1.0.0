@@ -2,6 +2,9 @@ section {
     nav {
         &.fsNavBox {
             width: nth($size, 1);
+            @include breakpoint($big) {
+                width: nth($size, 2);
+            }
             margin: 0 auto;
             height: 36px;
             .fsNavH {
