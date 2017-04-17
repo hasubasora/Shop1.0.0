@@ -258,14 +258,14 @@
 .s1 {
     @include wh(290px, 449px);
     @include breakpoint($big) {
-        @include wh( 236px, 365px);
+        @include wh( 236px, 367px);
     }
 }
 
 .s2 {
     @include wh(290px, 224px);
     @include breakpoint($big) {
-        @include wh( 236px, 182px);
+        @include wh( 237px, 183px);
     }
 }
 
@@ -281,7 +281,7 @@
 .s6 {
     @include wh(290px, 300px);
     @include breakpoint($big) {
-        @include wh( 236px, 244px);
+        @include wh( 237px, 244px);
     }
 }
 

@@ -476,8 +476,8 @@
             <nav class="fsFloorTitle">
                 <h3 class=""><a target="_blank" href="">1F 卧室</a></h3>
                 <ul id="fsFloorNav1" class="fsFloorNav1">
-                    <li class="fl" data-index="0">精品推荐</li>
-                    <li class="fl hover" data-index="1">新品上架</li>
+                    <li class="fl hover" data-index="0">精品推荐</li>
+                    <li class="fl " data-index="1">新品上架</li>
                 </ul>
                 <div class="fsFloorNavR">
                     <a href="">床</a>
@@ -526,9 +526,9 @@
                     </div>
                 </div>
                 <!--右边部分-->
-                <div class="floorContRight">
+                <div class="floorContRight ">
                     <!--banner-->
-                    <div class="scroll-bar JS_floor_banner fl">
+                    <div class="scroll-bar  fl">
                         <!--描述-->
                         <div class="content" style="opacity: 0.152044;">
                             <a href="" target="_blank" title="进口芬兰松双层童床">
@@ -557,9 +557,9 @@
                         <!--banner小点-->
                         <div class="fsBanNav">
                             <div class="lisBanner">
-                                <a href="javascript:;" target="_blank" class=""></a>
+                                <!--<a href="javascript:;" target="_blank" class=""></a>
                                 <a href="javascript:;" target="_blank" class="hover"></a>
-                                <a href="javascript:;" target="_blank" class=""></a>
+                                <a href="javascript:;" target="_blank" class=""></a>-->
                             </div>
                         </div>
                         <!--banner图-->
@@ -575,6 +575,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!--banner end-->
                     <!--右边-->
                     <div class="floor-bar s1 fl">
                         <a href="" title="中式环保原木衣柜" target="_blank"><img src="http://image.meilele.com/images/201604/1459985804688503101.jpg" alt="" data-src="http://image.meilele.com/images/201604/1459985804688503101.jpg" style="opacity: 1;"></a>
@@ -637,7 +638,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="floorContRight none" style="display:none">
+                <div class="floorContRight none">
                     <!--banner-->
                     <div class="scroll-bar JS_floor_banner fl">
                         <!--描述-->
@@ -666,18 +667,10 @@
                             </a>
                         </div>
                         <!--banner小点-->
-                        <div class="fsBanNav">
-                            <div class="lisBanner">
-                                <a href="javascript:;" target="_blank" class=""></a>
-                                <a href="javascript:;" target="_blank" class="hover"></a>
-                                <a href="javascript:;" target="_blank" class=""></a>
-                            </div>
-                        </div>
+
                         <!--banner图-->
                         <ul class="floorBanner">
-                            <li class="">
-                                <a href="" target="_blank" title="进口芬兰松双层童床"><img src="http://img003.mllres.com/images/201611/1479092296611347046.jpg" data-src="http://img003.mllres.com/images/201611/1479092296611347046.jpg" alt="进口芬兰松双层童床" style="opacity: 1;"></a>
-                            </li>
+
                             <li class="">
                                 <a href="" target="_blank" title="进口新西兰松木儿童城堡床"><img src="http://img004.mllres.com/images/201703/1489705904125592933.jpg" data-src="http://img004.mllres.com/images/201703/1489705904125592933.jpg" alt="进口新西兰松木儿童城堡床" style="opacity: 1;"></a>
                             </li>
@@ -836,5 +829,52 @@
     </div>
 </footer>
 </body>
+
+<script>
+    $(function() {
+        floot.init();
+    })
+    var floot = {
+        init() {
+            var _index = 0;
+            $('#fsFloorNav1 li').on('mouseover', function() {
+                _index = $(this).index()
+                $(this).addClass('hover').siblings().removeClass('hover');
+                $('.floorContRight').eq(_index).removeClass('none').siblings('.floorContRight').addClass('none');
+                let banLen = $('.floorBanner>li').length;
+                var _html = "";
+                for (var i = 0; i < banLen.length; i++) {
+                    _html += "<li></li>"
+                    alert(banLen)
+
+                }
+                $(".lisBanner").html(_html);
+            })
+
+
+        },
+        config: {
+
+        },
+
+        autoPlay() {
+            timeStop = setInterval(function() {
+                _index++;
+                if (_index == obj.length) {
+                    _index = 0;
+                }
+            }, 2000);
+        },
+
+        //all
+        allPlay() {
+            obj.eq(_index).addClass("hover").siblings().removeClass("hover");
+            objScroll.animate({
+                left: _index * -450
+            }, 200)
+        }
+
+    }
+</script>
 
 </html>
