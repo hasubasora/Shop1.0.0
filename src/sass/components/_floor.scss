@@ -18,7 +18,7 @@
                 width: 210px;
             }
         }
-        #fsFloorNav1 {
+        .fsFloorNav1 {
             float: left;
             li {
                 float: left;
@@ -189,8 +189,8 @@
         z-index: 21;
         bottom: 8px;
         .lisBanner {
-            margin: 0 auto;
-            width: 64px;
+            width: 100%;
+            text-align: center;
             a {
                 width: 10px;
                 height: 10px;

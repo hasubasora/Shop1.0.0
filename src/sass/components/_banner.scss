@@ -74,6 +74,9 @@
                 position: relative;
                 filter: inherit;
                 width: nth($size, 1);
+                @include breakpoint($big) {
+                    width: nth($size, 2);
+                }
                 height: 460px;
                 margin: 0 auto;
                 a {

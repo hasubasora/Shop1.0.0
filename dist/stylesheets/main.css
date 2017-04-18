@@ -358,6 +358,58 @@ footer .footer-index .footerWidth .service dd a {
   font-size: 12px;
 }
 
+.backTop {
+  display: none;
+  width: 44px;
+  right: 0;
+  position: fixed;
+  z-index: 100;
+  bottom: 0px;
+}
+.backTop .backTopZoom {
+  cursor: pointer;
+  height: 43px;
+}
+.backTop .backTopZoom .inBox {
+  display: inline-block;
+  width: 44px;
+  height: 42px;
+  overflow: hidden;
+  background: url(../images/icont2.gif) 0px -126px no-repeat;
+}
+.backTop .backTopZoom .lottery {
+  background-position: 0 -42px;
+}
+.backTop .backTopZoom .lottery:hover {
+  background-position: -44px -42px;
+}
+.backTop .backTopZoom .bonus {
+  background: url(../images/icont.gif) -44px 0;
+}
+.backTop .backTopZoom .bonus:hover {
+  background-position: 0 0;
+}
+.backTop .backTopZoom .top:hover {
+  background-position: -44px -126px;
+}
+.backTop .backTip {
+  position: absolute;
+  margin-top: 6px;
+  padding-left: 10px;
+  background: #fff6ce;
+  color: #d3033b;
+  line-height: 30px;
+  width: 62px;
+  margin-left: -72px;
+  -webkit-border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .fsNav {
   background-color: #f8f8f8;
   height: 30px;
@@ -550,6 +602,59 @@ footer .footer-index .footerWidth .service dd a {
   vertical-align: text-bottom;
 }
 
+.topSearch {
+  display: none;
+  background: #cf000e;
+  background: rgba(207, 0, 14, 0.7);
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  padding: 5px 0;
+}
+.topSearch .topSearchCont {
+  width: 1460px;
+  margin: 0 auto;
+  height: 45px;
+}
+@media (min-width: 1190px) and (max-width: 1460px) {
+  .topSearch .topSearchCont {
+    width: 1190px;
+  }
+}
+.topSearch .topSearchCont .s-logo {
+  width: 123px;
+  height: 35px;
+  float: left;
+  background: url("../images/site.png") -92px -202px no-repeat;
+  _background: url("../images/site.gif") -92px -202px no-repeat;
+  margin-top: 5px;
+  margin-right: 107px;
+}
+.topSearch .topSearchCont .searchForm [type="search"] {
+  width: 50%;
+  height: 35px;
+  margin-top: 5px;
+  outline: 0;
+  border: 0;
+}
+.topSearch .topSearchCont .searchForm [type=button] {
+  width: 10%;
+  height: 35px;
+  color: #fff;
+  font-size: 20px;
+  background: #cf000e;
+  vertical-align: bottom;
+}
+
+.fixBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+}
+
 /*! Component */
 .fsBanner {
   background: #ed5406;
@@ -631,6 +736,11 @@ footer .footer-index .footerWidth .service dd a {
   width: 1460px;
   height: 460px;
   margin: 0 auto;
+}
+@media (min-width: 1190px) and (max-width: 1460px) {
+  .fsBanner .fsBannerCenter li .fsBannerContent {
+    width: 1190px;
+  }
 }
 .fsBanner .fsBannerCenter li .fsBannerContent a img {
   margin: 0 auto;
@@ -976,10 +1086,10 @@ section nav.fsNavBox .fsNavList:after {
     width: 210px;
   }
 }
-.fsFloorBox .fsFloorTitle #fsFloorNav1 {
+.fsFloorBox .fsFloorTitle .fsFloorNav1 {
   float: left;
 }
-.fsFloorBox .fsFloorTitle #fsFloorNav1 li {
+.fsFloorBox .fsFloorTitle .fsFloorNav1 li {
   float: left;
   line-height: 14px;
   font-size: 14px;
@@ -989,7 +1099,7 @@ section nav.fsNavBox .fsNavList:after {
   cursor: pointer;
   color: #666;
 }
-.fsFloorBox .fsFloorTitle #fsFloorNav1 li.hover {
+.fsFloorBox .fsFloorTitle .fsFloorNav1 li.hover {
   font-size: 15px;
   font-weight: bold;
   border-bottom: 2px solid #222;
@@ -1180,8 +1290,8 @@ section nav.fsNavBox .fsNavList:after {
   bottom: 8px;
 }
 .scroll-bar .fsBanNav .lisBanner {
-  margin: 0 auto;
-  width: 64px;
+  width: 100%;
+  text-align: center;
 }
 .scroll-bar .fsBanNav .lisBanner a {
   width: 10px;

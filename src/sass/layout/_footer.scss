@@ -1,150 +1,202 @@
-    footer {
-        .footer-icon {
-            width: 100%;
-            background: #f8f8f8;
-            padding: 35px 0;
-            border-bottom: 1px solid #ededed;
-            margin-top: 35px;
-            text-align: center;
-            .footerWidth {
-                width: nth($size, 1);
-                @include breakpoint($big) {
-                    width: nth($size, 2);
+footer {
+    .footer-icon {
+        width: 100%;
+        background: #f8f8f8;
+        padding: 35px 0;
+        border-bottom: 1px solid #ededed;
+        margin-top: 35px;
+        text-align: center;
+        .footerWidth {
+            width: nth($size, 1);
+            @include breakpoint($big) {
+                width: nth($size, 2);
+            }
+            margin: 0 auto;
+            @include clearfix;
+            .icon-map {
+                width: 170px;
+                display: inline-block;
+                .icon-bg {
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 auto;
+                    background: url('../images/site.png') no-repeat;
+                    _background: url('../images/site.gif') no-repeat;
                 }
-                margin: 0 auto;
-                @include clearfix;
-                .icon-map {
-                    width: 170px;
-                    display: inline-block;
-                    .icon-bg {
-                        width: 50px;
-                        height: 50px;
-                        margin: 0 auto;
-                        background: url('../images/site.png') no-repeat;
-                        _background: url('../images/site.gif') no-repeat;
-                    }
-                    .icon-title {
-                        font-size: 14px;
-                        color: #000;
-                        text-align: center;
-                        margin-top: 10px;
-                    }
+                .icon-title {
+                    font-size: 14px;
+                    color: #000;
+                    text-align: center;
+                    margin-top: 10px;
                 }
             }
         }
-        .footer-index {
-            background: #f8f8f8;
-            padding: 35px 0 54px;
-            .footerWidth {
-                width: nth($size, 1);
-                @include breakpoint($big) {
-                    width: nth($size, 2);
-                }
-                margin: 0 auto;
-                @include clearfix;
-                .coverage {
-                    width: 240px;
-                    height: 165px;
-                    float: left;
-                    background: url('../images/site.png') -92px -387px no-repeat;
-                    _background: url('../images/site.gif') -92px -387px no-repeat;
-                    @for $i from 1 to 6 {
-                        .map#{$i} {
-                            @if $i==1 {
-                                font-size: 14px;
-                                line-height: 19px;
-                            }
-                            @else if $i==2 {
-                                font-size: 20px;
-                                color: #cf000e;
-                                margin: 5px 0;
-                            }
-                            @else if $i==3 {
-                                color: #999;
-                                margin-bottom: 30px;
-                                font-size: 12px;
-                                .red {
-                                    color: nth($sc, 1);
-                                }
-                            }
-                            @else if $i==4 {
-                                margin-bottom: 10px;
-                                a {
-                                    display: block;
-                                    color: #cf000e;
-                                    border: 1px solid #cf000e;
-                                    width: 106px;
-                                    height: 24px;
-                                    text-align: center;
-                                    line-height: 24px;
-                                    padding-left: 10px;
-                                    position: relative;
-                                    font-size: 12px;
-                                    .i-coord {
-                                        overflow: hidden;
-                                        position: absolute;
-                                        display: block;
-                                        width: 11px;
-                                        height: 14px;
-                                        background: url('../images/site.png') -92px -34px no-repeat;
-                                        _bbackground: url('../images/site.gif') -92px -34px no-repeat;
-                                        left: 5px;
-                                        top: 5px;
-                                    }
-                                }
-                            }
-                            @else if $i==5 {
-                                a {
-                                    display: block;
-                                    color: #cf000e;
-                                    border: 1px solid #cf000e;
-                                    width: 106px;
-                                    height: 24px;
-                                    text-align: center;
-                                    line-height: 24px;
-                                    padding-left: 10px;
-                                    position: relative;
-                                    font-size: 12px;
-                                    .i-mobile {
-                                        overflow: hidden;
-                                        position: absolute;
-                                        display: block;
-                                        width: 11px;
-                                        height: 14px;
-                                        background: url('../images/site.png') 92px -21px no-repeat;
-                                        _bbackground: url('../images/site.gif') 92px -21px no-repeat;
-                                        left: 6px;
-                                        top: 6px;
-                                    }
-                                }
-                            }
+    }
+    .footer-index {
+        background: #f8f8f8;
+        padding: 35px 0 54px;
+        .footerWidth {
+            width: nth($size, 1);
+            @include breakpoint($big) {
+                width: nth($size, 2);
+            }
+            margin: 0 auto;
+            @include clearfix;
+            .coverage {
+                width: 240px;
+                height: 165px;
+                float: left;
+                background: url('../images/site.png') -92px -387px no-repeat;
+                _background: url('../images/site.gif') -92px -387px no-repeat;
+                @for $i from 1 to 6 {
+                    .map#{$i} {
+                        @if $i==1 {
+                            font-size: 14px;
+                            line-height: 19px;
                         }
-                    }
-                }
-                .service {
-                    width: 911px;
-                    float: right;
-                    dl {
-                        width: 151px;
-                        float: left;
-                        &:nth-last-of-type(1) {
-                            float: right;
+                        @else if $i==2 {
+                            font-size: 20px;
+                            color: #cf000e;
+                            margin: 5px 0;
                         }
-                    }
-                    dt {
-                        color: #444;
-                        font-size: 14px;
-                        padding: 3px 0 5px;
-                    }
-                    dd {
-                        a {
-                            display: block;
+                        @else if $i==3 {
                             color: #999;
-                            margin-top: 9px;
+                            margin-bottom: 30px;
                             font-size: 12px;
+                            .red {
+                                color: nth($sc, 1);
+                            }
                         }
+                        @else if $i==4 {
+                            margin-bottom: 10px;
+                            a {
+                                display: block;
+                                color: #cf000e;
+                                border: 1px solid #cf000e;
+                                width: 106px;
+                                height: 24px;
+                                text-align: center;
+                                line-height: 24px;
+                                padding-left: 10px;
+                                position: relative;
+                                font-size: 12px;
+                                .i-coord {
+                                    overflow: hidden;
+                                    position: absolute;
+                                    display: block;
+                                    width: 11px;
+                                    height: 14px;
+                                    background: url('../images/site.png') -92px -34px no-repeat;
+                                    _bbackground: url('../images/site.gif') -92px -34px no-repeat;
+                                    left: 5px;
+                                    top: 5px;
+                                }
+                            }
+                        }
+                        @else if $i==5 {
+                            a {
+                                display: block;
+                                color: #cf000e;
+                                border: 1px solid #cf000e;
+                                width: 106px;
+                                height: 24px;
+                                text-align: center;
+                                line-height: 24px;
+                                padding-left: 10px;
+                                position: relative;
+                                font-size: 12px;
+                                .i-mobile {
+                                    overflow: hidden;
+                                    position: absolute;
+                                    display: block;
+                                    width: 11px;
+                                    height: 14px;
+                                    background: url('../images/site.png') 92px -21px no-repeat;
+                                    _bbackground: url('../images/site.gif') 92px -21px no-repeat;
+                                    left: 6px;
+                                    top: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .service {
+                width: 911px;
+                float: right;
+                dl {
+                    width: 151px;
+                    float: left;
+                    &:nth-last-of-type(1) {
+                        float: right;
+                    }
+                }
+                dt {
+                    color: #444;
+                    font-size: 14px;
+                    padding: 3px 0 5px;
+                }
+                dd {
+                    a {
+                        display: block;
+                        color: #999;
+                        margin-top: 9px;
+                        font-size: 12px;
                     }
                 }
             }
         }
     }
+}
+
+.backTop {
+    display: none;
+    width: 44px;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+    bottom: 0px;
+    .backTopZoom {
+        cursor: pointer;
+        height: 43px;
+        .inBox {
+            display: inline-block;
+            width: 44px;
+            height: 42px;
+            overflow: hidden;
+            background: url(../images/icont2.gif) 0px -126px no-repeat;
+        }
+        .lottery {
+            background-position: 0 -42px;
+            &:hover {
+                background-position: -44px -42px;
+            }
+        }
+        .bonus {
+            background: url(../images/icont.gif) -44px 0;
+            &:hover {
+                background-position: 0 0;
+            }
+        }
+        .top {
+            &:hover {
+                background-position: -44px -126px;
+            }
+        }
+    }
+    .backTip {
+        position: absolute;
+        margin-top: 6px;
+        padding-left: 10px;
+        background: #fff6ce;
+        color: #d3033b;
+        line-height: 30px;
+        width: 62px;
+        margin-left: -72px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        display: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
