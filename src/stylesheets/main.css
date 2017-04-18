@@ -208,7 +208,7 @@ footer .footer-icon .footerWidth {
   margin: 0 auto;
   *zoom: 1;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   footer .footer-icon .footerWidth {
     width: 1190px;
   }
@@ -247,7 +247,7 @@ footer .footer-index .footerWidth {
   margin: 0 auto;
   *zoom: 1;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   footer .footer-index .footerWidth {
     width: 1190px;
   }
@@ -422,7 +422,7 @@ footer .footer-index .footerWidth .service dd a {
   width: 1460px;
   margin: 0 auto;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsNav .fsWidth {
     width: 1190px;
   }
@@ -433,7 +433,7 @@ footer .footer-index .footerWidth .service dd a {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsNav .fsWidth .fsNavList {
     width: 41.66667%;
     float: left;
@@ -552,7 +552,7 @@ footer .footer-index .footerWidth .service dd a {
   padding-left: 0.83333%;
   padding-right: 0.83333%;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsNav .fsWidth .fsNavList:nth-child(2) {
     width: 58.33333%;
     float: left;
@@ -608,7 +608,7 @@ footer .footer-index .footerWidth .service dd a {
   margin: 0 auto;
   height: 45px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .topSearch .topSearchCont {
     width: 1190px;
   }
@@ -657,7 +657,7 @@ footer .footer-index .footerWidth .service dd a {
   margin: 0 auto;
   position: relative;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsBanner .bannerTop {
     width: 1190px;
   }
@@ -727,7 +727,7 @@ footer .footer-index .footerWidth .service dd a {
   height: 460px;
   margin: 0 auto;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsBanner .fsBannerCenter li .fsBannerContent {
     width: 1190px;
   }
@@ -741,7 +741,7 @@ section nav.fsNavBox {
   margin: 0 auto;
   height: 36px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   section nav.fsNavBox {
     width: 1190px;
   }
@@ -907,7 +907,7 @@ section nav.fsNavBox .fsNavList:after {
   padding: 29px 0;
   *zoom: 1;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsSearchBox {
     width: 1190px;
   }
@@ -933,7 +933,7 @@ section nav.fsNavBox .fsNavList:after {
   padding-right: 0.83333%;
 }
 .fsSearchBox .fsSearchInput {
-  width: 50%;
+  width: 49.16667%;
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
@@ -1003,7 +1003,7 @@ section nav.fsNavBox .fsNavList:after {
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsTabsBox {
     width: 1190px;
   }
@@ -1016,7 +1016,7 @@ section nav.fsNavBox .fsNavList:after {
   overflow: hidden;
   float: left;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsTabsBox .fsTabs {
     width: 290px;
     height: 150px;
@@ -1049,7 +1049,7 @@ section nav.fsNavBox .fsNavList:after {
   width: 1460px;
   margin: 40px auto 0;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox {
     width: 1190px;
   }
@@ -1067,7 +1067,7 @@ section nav.fsNavBox .fsNavList:after {
   padding: 4px 0 12px;
   float: left;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorTitle h3 {
     width: 210px;
   }
@@ -1127,7 +1127,7 @@ section nav.fsNavBox .fsNavList:after {
   border-left: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorCont .floorContLeft {
     height: 610px;
     width: 210px;
@@ -1166,7 +1166,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 182px;
   overflow: hidden;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorCont .floorContLeft .aTag {
     padding: 38px 0 0 30px;
     height: 163px;
@@ -1188,7 +1188,7 @@ section nav.fsNavBox .fsNavList:after {
   padding: 20px 0 12px;
   width: 254px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorCont .floorContLeft .ad {
     width: 210px;
     padding: 22px 0 14px;
@@ -1206,7 +1206,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 74px;
   width: 115px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorCont .floorContLeft .ad a img {
     height: 60px;
     width: 94px;
@@ -1217,7 +1217,7 @@ section nav.fsNavBox .fsNavList:after {
   width: 1204px;
   float: left;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .fsFloorBox .fsFloorCont .floorContRight {
     height: 609px;
     width: 979px;
@@ -1233,7 +1233,7 @@ section nav.fsNavBox .fsNavList:after {
   overflow: hidden;
   float: left;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .scroll-bar {
     height: 366px;
     width: 505px;
@@ -1337,7 +1337,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 450px;
   width: 290px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .s1 {
     height: 366px;
     width: 236px;
@@ -1348,7 +1348,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 225px;
   width: 291px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .s2 {
     height: 183px;
     width: 237px;
@@ -1360,7 +1360,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 300px;
   width: 310px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .s4,
   .s5 {
     height: 244px;
@@ -1373,7 +1373,7 @@ section nav.fsNavBox .fsNavList:after {
   height: 300px;
   width: 291px;
 }
-@media (min-width: 1190px) and (max-width: 1460px) {
+@media (max-width: 1460px) {
   .s7,
   .s6 {
     height: 244px;
