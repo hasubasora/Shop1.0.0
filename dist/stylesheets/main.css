@@ -657,9 +657,7 @@ footer .footer-index .footerWidth .service dd a {
 
 /*! Component */
 .fsBanner {
-  background: #ed5406;
   position: relative;
-  outline: 1px solid blue;
 }
 .fsBanner .bannerTop {
   width: 1460px;
@@ -729,8 +727,18 @@ footer .footer-index .footerWidth .service dd a {
   _background: url("http://image.meilele.com/images/common/site/site.gif") -92px -107px no-repeat;
   margin: 10px auto 0;
 }
-.fsBanner .fsBannerCenter li .fsBannerContent {
+.fsBanner .fsBannerCenter {
+  height: 460px;
+  background: #ed5406;
   position: relative;
+}
+.fsBanner .fsBannerCenter li {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.fsBanner .fsBannerCenter li .fsBannerContent {
   -webkit-filter: inherit;
   filter: inherit;
   width: 1460px;
@@ -743,7 +751,37 @@ footer .footer-index .footerWidth .service dd a {
   }
 }
 .fsBanner .fsBannerCenter li .fsBannerContent a img {
-  margin: 0 auto;
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+.fsBanner .fsBannerCenter li .fsBannerContent a img.add {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.fsBanner .fsBannerFot {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 21;
+  bottom: 8px;
+}
+.fsBanner .fsBannerFot a {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  opacity: .8;
+  background: #fff;
+  display: inline-block;
+  margin: 0 4px;
+  opacity: .6;
+}
+.fsBanner .fsBannerFot a.hover {
+  opacity: 1;
 }
 
 section nav.fsNavBox {

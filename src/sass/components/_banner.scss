@@ -1,5 +1,4 @@
 .fsBanner {
-    background: rgb(237, 84, 6);
     position: relative;
     .bannerTop {
         width: nth($size, 1);
@@ -69,9 +68,15 @@
         }
     }
     .fsBannerCenter {
+        height: 460px;
+        background: rgb(237, 84, 6);
+        position: relative;
         li {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
             .fsBannerContent {
-                position: relative;
                 filter: inherit;
                 width: nth($size, 1);
                 @include breakpoint($big) {
@@ -81,12 +86,34 @@
                 margin: 0 auto;
                 a {
                     img {
-                        margin: 0 auto;
+                        transform: translateX(-10px);
+                        transition: 1s ease-in-out;
+                        &.add {
+                            transform: translateX(10px);
+                        }
                     }
                 }
             }
         }
     }
-    @include outline(blue);
-    .fsBannerFot {}
+    .fsBannerFot {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        z-index: 21;
+        bottom: 8px;
+        a {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: .8;
+            background: #fff;
+            display: inline-block;
+            margin: 0 4px;
+            opacity: .6;
+            &.hover {
+                opacity: 1;
+            }
+        }
+    }
 }

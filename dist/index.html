@@ -427,17 +427,17 @@
                 </div>
             </div>
             <ul class="fsBannerCenter">
-                <li>
+                <li class="">
                     <div class="fsBannerContent">
                         <a href="#"><img src="images/b01.jpg" alt=""></a>
                     </div>
                 </li>
-                <li>
+                <li class="none">
                     <div class="fsBannerContent">
                         <a href="#"><img src="images/b02.jpg" alt=""></a>
                     </div>
                 </li>
-                <li>
+                <li class="none">
                     <div class="fsBannerContent">
                         <a href="#"><img src="images/b03.jpg" alt=""></a>
                     </div>
@@ -1157,9 +1157,12 @@
             // 点点生成
             floot.spot($('#floorBanner>li'), $(".spot"));
             floot.spot($('#floorBanner2>li'), $(".spot2"));
+            floot.spot($('.fsBannerCenter li'), $(".fsBannerFot"));
             // 轮播图
             floot.spotbtn($(".spot a"), $('#floorBanner li'), $('#fb1>.content'));
             floot.spotbtn($(".spot2 a"), $('#floorBanner2 li'), $('#fb2>.content'));
+            floot.spotbtn($(".fsBannerFot a"), $('.fsBannerCenter li'));
+
         },
         tab(b, t) { //切换
             let _idx = 0;
@@ -1169,7 +1172,7 @@
                 t.eq(_idx).removeClass('none').siblings('.floorContRight').addClass('none');
             })
         },
-        spotbtn(spot, ban, con) { //万能轮播图
+        spotbtn(spot, ban, con = null) { //万能轮播图
             let _index = 0;
             let timeStop = null;
             // 图片播放
@@ -1197,8 +1200,27 @@
 
             function autoPlay() { //d=小点 b=图片 t=解释 
                 spot.eq(_index).addClass("hover").siblings().removeClass("hover");
-                ban.eq(_index).fadeIn().siblings('li').fadeOut();
-                con.eq(_index).fadeIn().siblings('.content').fadeOut();
+                // alert(ban.eq(_index).get(0).tagName);
+                // alert(ban.eq(_index).find('img').get(0).tagName);
+                if (con != null) {
+                    ban.eq(_index).fadeIn(100).siblings('li').fadeOut(100);
+                    con.eq(_index).fadeIn().siblings('.content').fadeOut();
+                } else {
+                    ban.eq(_index).fadeIn().siblings('li').fadeOut().find('img').removeClass('add');
+                    ban.eq(_index).find('img').addClass('add');
+                    switch (_index) {
+                        case 1:
+                            ban.parent().css('background', 'rgb(153,0,3)')
+                            break;
+                        case 2:
+                            ban.parent().css('background', 'rgb(45,217,239)')
+                            break;
+                        default:
+                            ban.parent().css('background', 'rgb(237, 84, 6)')
+                    }
+
+
+                }
             }
         },
         spot(li, spot) { //轮播图的点点
