@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="framework/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <title>登录</title>
+</head>
+
+<body>
+    <header class="login-header">
+        <div id="" class="user_header clearfix" style="padding:15px 0px;">
+            <div class="logo Left" style="background: url(http://image.meilele.com/images/flow2.png) 0 0 no-repeat;width:160px;height:52px">
+                <a href="/" title="返回美乐乐首页"><img style="background:none" src="http://image.meilele.com/images/blank.gif" width="160" height="52" border="0" alt="美乐乐"></a>
+            </div>
+            <div id="" class="nav Right">
+                <a href="/">返回首页</a> |
+                <a href="/article_cat-4/article-656.html" target="_blank">帮助中心</a>
+            </div>
+        </div>
+    </header>
+    <div class="main bg-red">
+        <div class="content clearfix">
+            <article class="Left">
+                <a href="http://www.meilele.com/topic/201705_jjtt.html?site_from=zhannei#thg=gaca&amp;adg=gaco&amp;adn=%E7%99%BB%E5%BD%95%E9%A1%B5%E7%BA%A2%E5%8C%85%E5%B9%BF%E5%91%8A&amp;ado=1&amp;adc=0" title="51家装头条" target="_blank">
+                    <img alt="51家装头条" src="http://img001.mllres.com/images/201704/1492449604513201368.png" style="background-color:transparent;" width="620" height="454" class="ad-img">
+                </a>
+            </article>
+            <aside class="Right" id="JS_loginForm">
+                <div class="yahei">
+                    <div class="switch-type">
+                        <ul class="login-switch clearfix" style="left: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(209, 209, 209);">
+                            <li class="switch-weixin J-weixin-request JS_switch-key" data-switch-index="0">微信登录<img class="i-new" src="http://img002.mllres.com/images/new2015.gif" alt=""></li>
+                            <li class="switch-acount JS_switch-key on" data-switch-index="1">账号登录</li>
+                            <li class="switch-mobile">手机号快捷登录</li>
+                        </ul>
+                    </div>
+                    <div class="login-form">
+                        <div class="login-type clearfix" style="left: -306px;">
+
+                            <div class="login-weixin Left">
+                                <div class="qr-code">
+                                    <img id="JS_QR_CODE" src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQH98DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyV1BFSEVUWndiM2UxWG5EVDFvMWgAAgT7GvdYAwTcjAAA" alt="" width="174" height="174">
+                                    <div class="qr-mark"></div>
+                                </div>
+                                <p style="margin-top:10px" id="JS_QR_TEXT">二维码获取失败,请刷新页面重试！</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+<script>
+    /*
+                        
+                             <div id="JS_login_pwd" class="login-pwd Left">
+                                                    <div class="input-group select-username" style="overflow:inherit">
+                                                        <label class="i-user" for="username"></label>
+                                                        <input class="yahei gray" name="username" type="text">
+                                                    </div>
+                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                                    <div class="input-group">
+                                                        <label class="i-pwd" for="password"></label>
+                                                        <input class="yahei black" name="password" type="password" autocomplete="off" style="display: none;"><input class="yahei gray">
+                                                    </div>
+                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+
+                                                    <div class="input-group none">
+                                                        <label class="i-captcha" for="captcha"></label><input maxlength="4" class="Left yahei gray" name="captcha" type="text" style="width:150px">
+                                                        <a class="Left" href="javascript:void(0);"><img class="captcha-img" width="60" height="30" id="JS_validCode" src="http://img004.mllres.com/themes/paipai/images/blank.gif" title="看不清换一张" alt="验证码"></a>
+                                                        <a class="Left refresh-btn" href="javascript:void(0);" id="JS_refreshBtn">换一张</a>
+                                                    </div>
+                                                    <p class="error_tip red none" style="visibility: hidden;">&nbsp;</p>
+
+                                                    <div class="checkbox-group gray">
+                                                        <i class="i-checkbox"></i><span>自动登录</span>
+                                                    </div>
+                                                    <a class="submit-btn" href="javascript:;">登录</a>
+                                                    <div class="regist-group clearfix">
+                                                        <a class="gray Left" href="/user/?act=register">注册</a><a class="gray Right" href="/user/?act=get_password">忘记密码?</a>
+                                                    </div>
+                                                    <div class="other-group gray">
+                                                        <dl class="Left other-login">
+                                                            <dt>使用合作账号登录：</dt>
+                                                            <dd class="clearfix other-login">
+                                                                <a class="i-qq Left" href="/dubbo_api/user/login/thirdLogin/QQ"></a>
+                                                                <a class="i-weibo Left" href="/dubbo_api/user/login/thirdLogin/WEIBO"></a>
+                                                                <span class="i-weixin Left JS_switch-key J-weixin-request" data-switch-index="0"></span>
+                                                                <a class="i-zhifubao Left" href="/dubbo_api/user/login/thirdLogin/ALIPAY"></a>
+                                                                <!-- <a class="i-taobao Left" href="/dubbo_api/user/login/thirdLogin/TAOBAO"></a> -->
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="Left mobile-login">
+                                                            <dt>您还可以选择：</dt>
+                                                            <dd style="line-height:29px;cursor:pointer" class="JS_switch-key" data-switch-index="2">
+                                                                <a class="i-mobile Left" href="javascript:;"></a>手机快捷登录
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+
+                                                <div id="JS_login_mobile" class="login-mobile Left">
+                                                    <div class="input-group">
+                                                        <label class="i-phone" for="mobile"></label>
+                                                        <input class="yahei gray" name="username" type="text">
+                                                    </div>
+                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                                    <div class="input-group">
+                                                        <label class="i-pwd" for="captcha"></label><input maxlength="6" class="Left yahei gray" name="mobileCaptcha" type="text" style="width:150px">
+                                                        <a class="Left sms-btn" href="javascript:void(0);">获取短信验证码</a>
+                                                    </div>
+                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                                    <input type="hidden" name="captchaType" value="sendPwd">
+                                                    <a style="margin-top:30px;" class="submit-btn" href="javascript:;">登录</a>
+                                                    <div class="regist-group clearfix">
+                                                        <a class="gray Right JS_switch-key" data-switch-index="1" href="javascript:;">返回账号登录&gt;&gt;</a>
+                                                    </div>
+                                                </div>
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        */
+</script>
+
+</html>

@@ -23,6 +23,31 @@ footer {
                     background: url('../images/site.png') no-repeat;
                     _background: url('../images/site.gif') no-repeat;
                 }
+                @for $j from 1 to 9 {
+                    .i#{$j} {
+                        @if $j==1 {
+                            background-position: 0 -250px;
+                        }
+                        @if $j==3 {
+                            background-position: 0 -350px;
+                        }
+                        @if $j==4 {
+                            background-position: 0 -300px;
+                        }
+                        @if $j==5 {
+                            background-position: 0 -50px;
+                        }
+                        @if $j==6 {
+                            background-position: 0 0;
+                        }
+                        @if $j==7 {
+                            background-position: 0 -150px;
+                        }
+                        @if $j==8 {
+                            background-position: 0 -100px;
+                        }
+                    }
+                }
                 .icon-title {
                     font-size: 14px;
                     color: #000;

@@ -1,0 +1,236 @@
+.login-header {
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+    text-align: left;
+    .user_header {
+        padding: 15px 0px;
+        @include clearfix;
+        .logo {
+            background: url(http://image.meilele.com/images/flow2.png) 0 0 no-repeat;
+            width: 160px;
+            height: 52px;
+        }
+        .nav {
+            width: 180px;
+            padding-top: 40px;
+            text-align: right;
+            font-size: 12px;
+        }
+    }
+}
+
+.Left {
+    float: left;
+}
+
+.Right {
+    float: right;
+}
+
+.bg-red {
+    background: #cf000e;
+}
+
+.main {
+    padding: 72px 0;
+    min-width: 1190px;
+    .content {
+        @include clearfix;
+        margin: 0 auto;
+        width: 1070px;
+        position: relative;
+        aside {
+            position: relative;
+            width: 306px;
+            min-height: 400px;
+            background: #fff;
+            padding: 27px;
+            .yahei {
+                font-family: "Microsoft YaHei", "SimHei";
+                .switch-type {
+                    position: relative;
+                    width: 306px;
+                    overflow: hidden;
+                    .login-switch {
+                        position: relative;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #888;
+                        border-bottom: 1px solid #d1d1d1;
+                        width: 459px;
+                        left: 0px;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-bottom-color: rgb(209, 209, 209);
+                        li {
+                            position: relative;
+                            float: left;
+                            width: 153px;
+                            text-align: center;
+                            padding: 13px 0;
+                            cursor: pointer;
+                            &.on {
+                                margin-bottom: -1px;
+                                color: #cf000e;
+                                border-bottom: 2px solid #cf000e;
+                            }
+                            &.switch-mobile {
+                                color: #333;
+                                text-align: left;
+                                margin-bottom: -1px;
+                                border-bottom: 2px solid #fff;
+                            }
+                            &.switch-weixin {
+                                .i-new {
+                                    position: absolute;
+                                    top: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .login-form {
+                    width: 306px;
+                    overflow: hidden;
+                    position: relative;
+                    .login-type {
+                        @include clearfix;
+                        left: -306px;
+                        position: relative;
+                        width: 918px;
+                        .login-weixin {
+                            height: 298px;
+                            padding-top: 53px;
+                            text-align: center;
+                            .qr-code {
+                                position: relative;
+                                .qr-mark {
+                                    position: absolute;
+                                    background: rgba(0, 0, 0, .5);
+                                    width: 174px;
+                                    height: 174px;
+                                    left: 66px;
+                                    top: 0;
+                                }
+                            }
+                        }
+                    }
+                    .login-pwd {
+                        padding-top: 25px;
+                        .checkbox-group {
+                            height: 21px;
+                            line-height: 21px;
+                            .i-checkbox {
+                                float: left;
+                                width: 21px;
+                                height: 21px;
+                                background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -84px -30px no-repeat;
+                                margin-right: 4px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .input-group {
+                        position: relative;
+                        height: 40px;
+                        border: 1px solid #ddd;
+                        overflow: hidden;
+                        line-height: 40px;
+                        .i-user {
+                            float: left;
+                            width: 19px;
+                            height: 19px;
+                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') 0 -30px no-repeat;
+                            margin: 10px;
+                        }
+                        .i-pwd {
+                            float: left;
+                            width: 19px;
+                            height: 19px;
+                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -21px -30px no-repeat;
+                            margin: 10px;
+                        }
+                        .i-captcha {
+                            float: left;
+                            width: 19px;
+                            height: 19px;
+                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -42px -30px no-repeat;
+                            margin: 10px;
+                        }
+                        input {
+                            float: left;
+                            height: 20px;
+                            font-size: 13px;
+                            width: 254px;
+                            border: 0;
+                            padding: 10px 0;
+                            margin: 0;
+                        }
+                        .refresh-btn {
+                            color: #4a92f5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select-username {
+    position: relative;
+    overflow: inherit;
+}
+
+.captcha-img {
+    margin: 5px;
+}
+
+.error_tip {
+    font-size: 12px;
+    margin: 5px 0 4px;
+}
+
+.red {
+    color: #cf000e;
+}
+
+.gray {
+    color: #b2b2b2;
+}
+
+.black {
+    color: #333!important;
+}
+
+.none {
+    display: none;
+}
+
+.checkbox-group {
+    font-size: 13px;
+}
+
+.submit-btn {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    background-color: #cf000e;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 3px;
+    margin: 10px 0 0;
+}
+
+.regist-group {
+    @include clearfix;
+    margin: 20px 0 30px;
+}
+
+img {
+    overflow: hidden;
+    vertical-align: top;
+    background: #eee;
+}

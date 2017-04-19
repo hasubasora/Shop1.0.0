@@ -45,7 +45,7 @@ let floot = {
         function spotPlay() { //自动播放
             timeStop = setInterval(function() {
                 _index++;
-                console.log(_index)
+                // console.log(_index)
                 if (_index == spot.length) {
                     _index = 0;
                 }
@@ -79,8 +79,6 @@ let floot = {
                         ban.find('.ddq').removeClass('rightLogo');
 
                 }
-
-
             }
         }
     },

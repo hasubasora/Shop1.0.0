@@ -232,6 +232,27 @@ footer .footer-icon .footerWidth .icon-map .icon-bg {
   background: url("../images/site.png") no-repeat;
   _background: url("../images/site.gif") no-repeat;
 }
+footer .footer-icon .footerWidth .icon-map .i1 {
+  background-position: 0 -250px;
+}
+footer .footer-icon .footerWidth .icon-map .i3 {
+  background-position: 0 -350px;
+}
+footer .footer-icon .footerWidth .icon-map .i4 {
+  background-position: 0 -300px;
+}
+footer .footer-icon .footerWidth .icon-map .i5 {
+  background-position: 0 -50px;
+}
+footer .footer-icon .footerWidth .icon-map .i6 {
+  background-position: 0 0;
+}
+footer .footer-icon .footerWidth .icon-map .i7 {
+  background-position: 0 -150px;
+}
+footer .footer-icon .footerWidth .icon-map .i8 {
+  background-position: 0 -100px;
+}
 footer .footer-icon .footerWidth .icon-map .icon-title {
   font-size: 14px;
   color: #000;
@@ -1435,123 +1456,269 @@ section nav.fsNavBox .fsNavList:after {
   display: none;
 }
 
-.fs-table {
-  table-layout: fixed;
-  width: 1300px;
+.login-header {
+  position: relative;
+  width: 1190px;
+  margin: 0 auto;
+  text-align: left;
 }
-.fs-table thead {
-  border: 1px solid red;
+.login-header .user_header {
+  padding: 15px 0px;
+  *zoom: 1;
 }
-.fs-table thead th {
-  padding: 10px;
-  border: 1px solid red;
-  vertical-align: middle;
+.login-header .user_header:before, .login-header .user_header:after {
+  content: "";
+  display: table;
 }
-.fs-table tbody {
-  border: 1px solid black;
+.login-header .user_header:after {
+  clear: both;
+  overflow: hidden;
 }
-.fs-table tbody td {
-  border: 1px solid red;
-  padding: 10px;
+.login-header .user_header .logo {
+  background: url(http://image.meilele.com/images/flow2.png) 0 0 no-repeat;
+  width: 160px;
+  height: 52px;
 }
-.fs-table tfoot {
-  border: 1px solid red;
-  padding: 10px;
-}
-
-.aaa {
-  width: 1000px;
-  overflow: overlay;
-  overflow-x: auto;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+.login-header .user_header .nav {
+  width: 180px;
+  padding-top: 40px;
+  text-align: right;
+  font-size: 12px;
 }
 
-.fs-btn {
-  padding: 0.375rem 0.75rem;
-  display: inline-block;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
+.Left {
+  float: left;
+}
+
+.Right {
+  float: right;
+}
+
+.bg-red {
+  background: #cf000e;
+}
+
+.main {
+  padding: 72px 0;
+  min-width: 1190px;
+}
+.main .content {
+  *zoom: 1;
+  margin: 0 auto;
+  width: 1070px;
+  position: relative;
+}
+.main .content:before, .main .content:after {
+  content: "";
+  display: table;
+}
+.main .content:after {
+  clear: both;
+  overflow: hidden;
+}
+.main .content aside {
+  position: relative;
+  width: 306px;
+  min-height: 400px;
+  background: #fff;
+  padding: 27px;
+}
+.main .content aside .yahei {
+  font-family: "Microsoft YaHei", "SimHei";
+}
+.main .content aside .yahei .switch-type {
+  position: relative;
+  width: 306px;
+  overflow: hidden;
+}
+.main .content aside .yahei .switch-type .login-switch {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+  border-bottom: 1px solid #d1d1d1;
+  width: 459px;
+  left: 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d1d1d1;
+}
+.main .content aside .yahei .switch-type .login-switch li {
+  position: relative;
+  float: left;
+  width: 153px;
   text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
+  padding: 13px 0;
   cursor: pointer;
-  touch-action: manipulation;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 20px;
+}
+.main .content aside .yahei .switch-type .login-switch li.on {
+  margin-bottom: -1px;
+  color: #cf000e;
+  border-bottom: 2px solid #cf000e;
+}
+.main .content aside .yahei .switch-type .login-switch li.switch-mobile {
+  color: #333;
+  text-align: left;
+  margin-bottom: -1px;
+  border-bottom: 2px solid #fff;
+}
+.main .content aside .yahei .switch-type .login-switch li.switch-weixin .i-new {
+  position: absolute;
+  top: 4px;
+}
+.main .content aside .yahei .login-form {
+  width: 306px;
+  overflow: hidden;
+  position: relative;
+}
+.main .content aside .yahei .login-form .login-type {
+  *zoom: 1;
+  left: -306px;
+  position: relative;
+  width: 918px;
+}
+.main .content aside .yahei .login-form .login-type:before, .main .content aside .yahei .login-form .login-type:after {
+  content: "";
+  display: table;
+}
+.main .content aside .yahei .login-form .login-type:after {
+  clear: both;
+  overflow: hidden;
+}
+.main .content aside .yahei .login-form .login-type .login-weixin {
+  height: 298px;
+  padding-top: 53px;
+  text-align: center;
+}
+.main .content aside .yahei .login-form .login-type .login-weixin .qr-code {
+  position: relative;
+}
+.main .content aside .yahei .login-form .login-type .login-weixin .qr-code .qr-mark {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 174px;
+  height: 174px;
+  left: 66px;
+  top: 0;
+}
+.main .content aside .yahei .login-form .login-pwd {
+  padding-top: 25px;
+}
+.main .content aside .yahei .login-form .login-pwd .checkbox-group {
+  height: 21px;
+  line-height: 21px;
+}
+.main .content aside .yahei .login-form .login-pwd .checkbox-group .i-checkbox {
+  float: left;
+  width: 21px;
+  height: 21px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -84px -30px no-repeat;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.main .content aside .yahei .login-form .input-group {
+  position: relative;
+  height: 40px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  line-height: 40px;
+}
+.main .content aside .yahei .login-form .input-group .i-user {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") 0 -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group .i-pwd {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -21px -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group .i-captcha {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -42px -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group input {
+  float: left;
+  height: 20px;
+  font-size: 13px;
+  width: 254px;
+  border: 0;
+  padding: 10px 0;
+  margin: 0;
+}
+.main .content aside .yahei .login-form .input-group .refresh-btn {
+  color: #4a92f5;
 }
 
-.fs-btn-group .btn-lg {
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.3333333;
-  border-radius: 20px;
+.select-username {
+  position: relative;
+  overflow: inherit;
 }
 
-.fs-btn-group .btn-sm {
-  padding: 5px 10px;
+.captcha-img {
+  margin: 5px;
+}
+
+.error_tip {
   font-size: 12px;
-  line-height: 1.5;
-  border-radius: 20px;
+  margin: 5px 0 4px;
 }
 
-.fs-btn-group .btn-xs {
-  padding: 1px 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 20px;
+.red {
+  color: #cf000e;
 }
 
-.fs-btn-success {
-  background: #1ab394;
-  color: white;
+.gray {
+  color: #b2b2b2;
 }
 
-th,
-td {
-  font-size: 12px;
+.black {
+  color: #333 !important;
 }
-th:nth-child(1),
-td:nth-child(1) {
-  width: 100px;
+
+.none {
+  display: none;
 }
-th:nth-child(2),
-td:nth-child(2) {
-  width: 100px;
+
+.checkbox-group {
+  font-size: 13px;
 }
-th:nth-child(3),
-td:nth-child(3) {
-  width: 100px;
+
+.submit-btn {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  background-color: #cf000e;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 3px;
+  margin: 10px 0 0;
 }
-th:nth-child(4),
-td:nth-child(4) {
-  width: 100px;
+
+.regist-group {
+  *zoom: 1;
+  margin: 20px 0 30px;
 }
-th:nth-child(5),
-td:nth-child(5) {
-  width: 100px;
+.regist-group:before, .regist-group:after {
+  content: "";
+  display: table;
 }
-th:nth-child(6),
-td:nth-child(6) {
-  width: 100px;
+.regist-group:after {
+  clear: both;
+  overflow: hidden;
 }
-th:nth-child(7),
-td:nth-child(7) {
-  width: 200px;
-}
-th:nth-child(8),
-td:nth-child(8) {
-  width: 200px;
-}
-th:nth-child(9),
-td:nth-child(9) {
-  width: 200px;
-}
-th:nth-child(10),
-td:nth-child(10) {
-  width: 200px;
+
+img {
+  overflow: hidden;
+  vertical-align: top;
+  background: #eee;
 }
