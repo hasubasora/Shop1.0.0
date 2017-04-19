@@ -70,6 +70,7 @@
     .fsBannerCenter {
         height: 460px;
         background: rgb(237, 84, 6);
+        transition: .1s linear;
         position: relative;
         li {
             position: absolute;
@@ -86,10 +87,23 @@
                 margin: 0 auto;
                 a {
                     img {
-                        transform: translateX(-10px);
+                        transform: translateX(0px);
                         transition: 1s ease-in-out;
                         &.add {
                             transform: translateX(10px);
+                        }
+                        &.zhe {
+                            position: absolute;
+                            top: 20px;
+                            right: 200px;
+                        }
+                        &.ddq {
+                            position: absolute;
+                            top: 20px;
+                            right: 200px;
+                        }
+                        &.rightLogo {
+                            right: 220px;
                         }
                     }
                 }

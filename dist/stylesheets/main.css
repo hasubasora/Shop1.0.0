@@ -730,6 +730,8 @@ footer .footer-index .footerWidth .service dd a {
 .fsBanner .fsBannerCenter {
   height: 460px;
   background: #ed5406;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
   position: relative;
 }
 .fsBanner .fsBannerCenter li {
@@ -751,9 +753,9 @@ footer .footer-index .footerWidth .service dd a {
   }
 }
 .fsBanner .fsBannerCenter li .fsBannerContent a img {
-  -webkit-transform: translateX(-10px);
-  -ms-transform: translateX(-10px);
-  transform: translateX(-10px);
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
@@ -761,6 +763,19 @@ footer .footer-index .footerWidth .service dd a {
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
   transform: translateX(10px);
+}
+.fsBanner .fsBannerCenter li .fsBannerContent a img.zhe {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+}
+.fsBanner .fsBannerCenter li .fsBannerContent a img.ddq {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+}
+.fsBanner .fsBannerCenter li .fsBannerContent a img.rightLogo {
+  right: 220px;
 }
 .fsBanner .fsBannerFot {
   width: 100%;
