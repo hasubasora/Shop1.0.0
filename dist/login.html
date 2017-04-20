@@ -32,14 +32,24 @@
             <aside class="Right" id="JS_loginForm">
                 <div class="yahei">
                     <div class="switch-type">
-                        <ul class="login-switch clearfix" style="left: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(209, 209, 209);">
-                            <li class="switch-weixin J-weixin-request JS_switch-key" data-switch-index="0">微信登录<img class="i-new" src="http://img002.mllres.com/images/new2015.gif" alt=""></li>
-                            <li class="switch-acount JS_switch-key on" data-switch-index="1">账号登录</li>
+                        <ul class="login-switch clearfix">
+                            <li class="switch-weixin J-weixin-request switch-key" data-switch-index="0">微信登录<img class="i-new" src="http://img002.mllres.com/images/new2015.gif" alt=""></li>
+                            <li class="switch-acount switch-key on" data-switch-index="1">账号登录</li>
                             <li class="switch-mobile">手机号快捷登录</li>
                         </ul>
                     </div>
                     <div class="login-form">
                         <div class="login-type clearfix">
+                            <!--微信登录-->
+                            <div class="login-weixin Left">
+                                <div class="qr-code">
+                                    <img id="QR_CODE" src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQE38DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZ2xCVEZUWndiM2UxWTFLVXhvMXMAAgQlYfhYAwTcjAAA" alt="" width="174" height="174">
+                                    <div class="qr-mark none"></div>
+                                </div>
+                                <p style="margin-top:10px" id="QR_TEXT">微信扫一扫，快速登录</p>
+                            </div>
+                            <!--微信登录-->
+
                             <!--密码登录-->
                             <div id="JS_login_pwd" class="login-pwd Left">
                                 <div class="input-group select-username" style="overflow:inherit">
@@ -88,18 +98,115 @@
                             </div>
                             <!--密码登录-->
 
-
-
-
-
+                            <!--手机登录-->
+                            <div id="JS_login_mobile" class="login-mobile Left">
+                                <div class="input-group">
+                                    <label class="i-phone" for="mobile"></label>
+                                    <input class="yahei gray" name="username" type="text">
+                                </div>
+                                <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                <div class="input-group">
+                                    <label class="i-pwd" for="captcha"></label><input maxlength="6" class="Left yahei gray" name="mobileCaptcha" type="text" style="width:150px">
+                                    <a class="Left sms-btn" href="javascript:void(0);">获取短信验证码</a>
+                                </div>
+                                <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                <input type="hidden" name="captchaType" value="sendPwd">
+                                <a style="margin-top:30px;" class="submit-btn" href="javascript:;">登录</a>
+                                <div class="regist-group clearfix">
+                                    <a class="gray Right switchPhone" data-switch-index="1" href="javascript:;">返回账号登录&gt;&gt;</a>
+                                </div>
+                            </div>
+                            <!--手机登录-->
                         </div>
                     </div>
                 </div>
             </aside>
         </div>
     </div>
+    <footer>
+    <div class="footer-icon">
+        <div class="footerWidth">
+            <a href="o2o" target="_blank" title="网商+体验馆" rel="nofollow" class="icon-map">
+                <p class="icon-bg i1"></p>
+                <p class="icon-title">网商+体验馆</p></a><a href="bso" target="_blank" title="100%正品" rel="nofollow" class="icon-map">
+                <p class="icon-bg i3"></p>
+                <p class="icon-title">100%正品</p>
+            </a><a href="quality" target="_blank" title="双重质检" rel="nofollow" class="icon-map">
+                <p class="icon-bg i4"></p>
+                <p class="icon-title">双重质检</p>
+            </a><a href="purchase" target="_blank" title="全球化采购" rel="nofollow" class="icon-map">
+                <p class="icon-bg i5"></p>
+                <p class="icon-title">全球化采购</p>
+            </a><a href="returns" target="_blank" title="无理由退货" rel="nofollow" class="icon-map">
+                <p class="icon-bg i6"></p>
+                <p class="icon-title">无理由退货</p>
+            </a><a href="postage" target="_blank" title="贵就赔" rel="nofollow" class="icon-map">
+                <p class="icon-bg i7"></p>
+                <p class="icon-title">贵就赔</p>
+            </a><a href="mouth" target="_blank" title="万千口碑" rel="nofollow" class="icon-map">
+                <p class="icon-bg i8"></p>
+                <p class="icon-title">万千口碑</p>
+            </a>
+        </div>
+    </div>
+    <div class="footer-index">
+        <div class="footerWidth clearfix">
+            <ul class="fl coverage">
+                <li class="map1">客服热线（8:00-23:00）</li>
+                <li class="map2">400-009-8666</li>
+                <li class="map3">美乐乐在全国实体店<span class="red">297</span>家、样板间<span class="red">1</span>家</li>
+                <li class="map4">
+                    <a href="/expr.html" target="_blank"><i class="i-coord"></i>查看全国实体店</a>
+                </li>
+                <li class="map5">
+                    <a href="javascript:;" onclick="$.codeSms(false, {click: '版权'});return false;"><i class="i-mobile"></i>免费发送到手机</a>
+                </li>
+            </ul>
+            <div class="fr clearfix service">
+                <dl>
+                    <dt>关于美乐乐</dt>
+                    <dd>
+                        <a href="/article_cat-12/article-5224.html" target="_blank" title="公司简介" rel="nofollow">公司简介</a> <a href="/article_cat-12/article-10600.html" target="_blank" title="媒体聚焦" rel="nofollow">媒体聚焦</a> <a href="/article_cat-12/article-5225.html"
+                            target="_blank" title="体验馆" rel="nofollow">体验馆</a> <a href="/article_cat-12/article-830.html" target="_blank" title="诚聘英才" rel="nofollow">诚聘英才</a> <a href="/article_cat-12/article-4615.html" target="_blank" title="联系我们" rel="nofollow">联系我们</a>                        <a href="/article_cat-12/article-10611.html" target="_blank" title="美乐乐O2O" rel="nofollow">美乐乐O2O</a> </dd>
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>
+                        <a href="/article_cat-6/article-5404.html" target="_blank" title="注册新用户" rel="nofollow">注册新用户</a> <a href="/article_cat-6/article-9930.html" target="_blank" title="会员级别" rel="nofollow">会员级别</a> <a href="/article_cat-6/article-9931.html"
+                            target="_blank" title="金币说明" rel="nofollow">金币说明</a> <a href="/article_cat-6/article-16736.html" target="_blank" title="乐币说明" rel="nofollow">乐币说明</a> <a href="/article_cat-6/article-101.html" target="_blank" title="订购家具流程" rel="nofollow">订购家具流程</a>                        <a href="/article_cat-6/article-5280.html" target="_blank" title="体验馆购买指导" rel="nofollow">体验馆购买指导</a> </dd>
+                </dl>
+                <dl>
+                    <dt>配送安装</dt>
+                    <dd>
+                        <a href="/article_cat-23/article-5405.html" target="_blank" title="收货指南" rel="nofollow">收货指南</a> <a href="/article_cat-23/article-3206.html" target="_blank" title="体验馆服务费" rel="nofollow">体验馆服务费</a> <a href="/article_cat-23/article-618.html"
+                            target="_blank" title="物流配送" rel="nofollow">物流配送</a> </dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd>
+                        <a href="/article_cat-26/article-620.html" target="_blank" title="45天无理由退换货" rel="nofollow">45天无理由退换货</a> <a href="/article_cat-26/article-621.html" target="_blank" title="如何申请退款" rel="nofollow">如何申请退款</a> <a href="/article_cat-26/article-2838.html"
+                            target="_blank" title="维修补件说明" rel="nofollow">维修补件说明</a> <a href="/article_cat-26/article-1530.html" target="_blank" title="贵就赔" rel="nofollow">贵就赔</a> </dd>
+                </dl>
+                <dl>
+                    <dt>购物保障</dt>
+                    <dd>
+                        <a href="/article_cat-15/article-2880.html" target="_blank" title="正品保证" rel="nofollow">正品保证</a> <a href="/article_cat-15/article-300.html" target="_blank" title="注册协议" rel="nofollow">注册协议</a> <a href="/article_cat-15/article-298.html"
+                            target="_blank" title="隐私保护" rel="nofollow">隐私保护</a> <a href="/article_cat-15/article-297.html" target="_blank" title="免责声明" rel="nofollow">免责声明</a> </dd>
+                </dl>
+                <dl class="fr">
+                    <dt>官方微信</dt>
+                    <dd>
+                        <img src="http://img003.mllres.com/images/201704/dfad46af6bcae11c07c491b7c73d7bf3.jpg" alt="美乐乐微信公众号" width="96" height="96">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 <script>
+    //打钩
     $('.checkbox-group>i').on('click', function() {
         if ($(this).hasClass("checked")) {
             $(this).removeClass('checked').siblings('span').removeClass('red');
@@ -108,36 +215,42 @@
         }
     })
 
-
-    /*
-                                                                         
-                                                                                    
-                                                                                    
-                                                      <div id="JS_login_mobile" class="login-mobile Left">
-                                                                                    <div class="input-group">
-                                                                                        <label class="i-phone" for="mobile"></label>
-                                                                                        <input class="yahei gray" name="username" type="text">
-                                                                                    </div>
-                                                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
-                                                                                    <div class="input-group">
-                                                                                        <label class="i-pwd" for="captcha"></label><input maxlength="6" class="Left yahei gray" name="mobileCaptcha" type="text" style="width:150px">
-                                                                                        <a class="Left sms-btn" href="javascript:void(0);">获取短信验证码</a>
-                                                                                    </div>
-                                                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
-                                                                                    <input type="hidden" name="captchaType" value="sendPwd">
-                                                                                    <a style="margin-top:30px;" class="submit-btn" href="javascript:;">登录</a>
-                                                                                    <div class="regist-group clearfix">
-                                                                                        <a class="gray Right JS_switch-key" data-switch-index="1" href="javascript:;">返回账号登录&gt;&gt;</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    */
+    //切换登录
+    let _ind = 0;
+    $('.login-switch li.switch-key').on('click', function() {
+        _ind = $(this).index();
+        $(this).addClass('on').siblings('.switch-key').removeClass('on');
+        if (_ind == 0) {
+            $('.login-type').animate({
+                left: '0'
+            });
+            setTimeout(function() {
+                $('.qr-mark').removeClass('none');
+                $('#QR_TEXT').html('二维码获取失败,请刷新页面重试！');
+            }, 5000);
+        }
+        if (_ind == 1) {
+            $('.login-type').animate({
+                left: '-306px'
+            });
+        }
+    })
+    $('.mobile-login').on('click', function() {
+        $('.login-type').animate({
+            left: '-612px'
+        });
+        $('.login-switch').animate({
+            left: '-306px'
+        });
+    })
+    $('.switchPhone').on('click', function() {
+        $('.login-type').animate({
+            left: '-306px'
+        });
+        $('.login-switch').animate({
+            left: '0'
+        });
+    })
 </script>
 
 </html>

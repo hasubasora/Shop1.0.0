@@ -43,7 +43,6 @@
         position: relative;
         aside {
             position: relative;
-            @include outline(blue);
             min-height: 400px;
             background: #fff;
             padding: 27px;
@@ -51,29 +50,25 @@
                 width: 306px;
                 font-family: "Microsoft YaHei", "SimHei";
                 .switch-type {
-                    @include outline(yellow);
                     position: relative;
                     @include clearfix;
                     width: 306px;
-                    // overflow: hidden;
+                    overflow: hidden;
                     .login-switch {
                         //切换登录
                         position: relative;
                         font-size: 16px;
                         font-weight: bold;
-                        color: #888;
                         border-bottom: 1px solid #d1d1d1;
+                        color: #888;
                         width: 459px;
-                        left: 0px;
-                        border-bottom-width: 1px;
-                        border-bottom-style: solid;
-                        border-bottom-color: rgb(209, 209, 209);
+                        height: 42px;
                         li {
                             position: relative;
                             float: left;
                             width: 153px;
                             text-align: center;
-                            padding: 13px 0;
+                            padding: 12px 0;
                             cursor: pointer;
                             &.on {
                                 margin-bottom: -1px;
@@ -102,15 +97,20 @@
                     position: relative;
                     .login-type {
                         @include clearfix;
-                        // left: -306px;
+                        left: -306px;
+                        // left: -612px;
                         position: relative;
                         width: 918px;
                         .login-weixin {
+                            width: 306px;
                             height: 298px;
                             padding-top: 53px;
                             text-align: center;
                             .qr-code {
                                 position: relative;
+                                >img {
+                                    margin-left: 66px;
+                                }
                                 .qr-mark {
                                     position: absolute;
                                     background: rgba(0, 0, 0, .5);
@@ -121,25 +121,32 @@
                                 }
                             }
                         }
-                    }
-                    .login-pwd {
-                        padding-top: 25px;
-                        .checkbox-group {
-                            height: 21px;
-                            line-height: 21px;
-                            .i-checkbox {
-                                width: 21px;
+                        .login-pwd {
+                            padding-top: 25px;
+                            width: 306px;
+                            .checkbox-group {
                                 height: 21px;
-                                margin: 0 4px 0 0;
+                                line-height: 21px;
+                                .i-checkbox {
+                                    width: 21px;
+                                    height: 21px;
+                                    margin: 0 4px 0 0;
+                                }
+                            }
+                        }
+                        .login-mobile {
+                            padding-top: 12px;
+                            .i-phone {
+                                height: 20px;
                             }
                         }
                     }
                     .input-group {
                         position: relative;
-                        height: 40px;
+                        height: 41px;
                         border: 1px solid #ddd;
                         overflow: hidden;
-                        line-height: 40px;
+                        line-height: 41px;
                         input {
                             float: left;
                             height: 20px;
@@ -159,24 +166,45 @@
     }
 }
 
+%cursor {
+    float: left;
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    margin: 10px;
+}
+
 $formName:(checkbox, -84px -30px),
 (user, 0 -30px),
 (pwd, -21px -30px),
-(captcha, -42px -30px);
+(captcha, -42px -30px),
+(phone, -63px -30px);
 @each $animal,
 $size in $formName {
     .i-#{$animal} {
-        float: left;
         background: url('../images/allPuzzle.png') $size no-repeat;
-        cursor: pointer;
-        width: 19px;
-        margin: 10px;
-        height: 19px;
+        @extend %cursor;
     }
 }
 
 .checked {
     background-position: -107px -30px;
+}
+
+.sms-btn {
+    font-size: 12px;
+    background: #f0f0f0;
+    color: #333;
+    height: 34px;
+    width: 110px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 3px;
+    margin-top: 3px;
+    &:hover {
+        color: #333!important;
+        text-decoration: none;
+    }
 }
 
 .select-username {

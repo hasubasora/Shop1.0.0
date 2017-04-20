@@ -32,14 +32,24 @@
             <aside class="Right" id="JS_loginForm">
                 <div class="yahei">
                     <div class="switch-type">
-                        <ul class="login-switch clearfix" style="left: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(209, 209, 209);">
-                            <li class="switch-weixin J-weixin-request JS_switch-key" data-switch-index="0">微信登录<img class="i-new" src="http://img002.mllres.com/images/new2015.gif" alt=""></li>
-                            <li class="switch-acount JS_switch-key on" data-switch-index="1">账号登录</li>
+                        <ul class="login-switch clearfix">
+                            <li class="switch-weixin J-weixin-request switch-key" data-switch-index="0">微信登录<img class="i-new" src="http://img002.mllres.com/images/new2015.gif" alt=""></li>
+                            <li class="switch-acount switch-key on" data-switch-index="1">账号登录</li>
                             <li class="switch-mobile">手机号快捷登录</li>
                         </ul>
                     </div>
                     <div class="login-form">
                         <div class="login-type clearfix">
+                            <!--微信登录-->
+                            <div class="login-weixin Left">
+                                <div class="qr-code">
+                                    <img id="QR_CODE" src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQE38DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZ2xCVEZUWndiM2UxWTFLVXhvMXMAAgQlYfhYAwTcjAAA" alt="" width="174" height="174">
+                                    <div class="qr-mark none"></div>
+                                </div>
+                                <p style="margin-top:10px" id="QR_TEXT">微信扫一扫，快速登录</p>
+                            </div>
+                            <!--微信登录-->
+
                             <!--密码登录-->
                             <div id="JS_login_pwd" class="login-pwd Left">
                                 <div class="input-group select-username" style="overflow:inherit">
@@ -88,18 +98,36 @@
                             </div>
                             <!--密码登录-->
 
-
-
-
-
+                            <!--手机登录-->
+                            <div id="JS_login_mobile" class="login-mobile Left">
+                                <div class="input-group">
+                                    <label class="i-phone" for="mobile"></label>
+                                    <input class="yahei gray" name="username" type="text">
+                                </div>
+                                <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                <div class="input-group">
+                                    <label class="i-pwd" for="captcha"></label><input maxlength="6" class="Left yahei gray" name="mobileCaptcha" type="text" style="width:150px">
+                                    <a class="Left sms-btn" href="javascript:void(0);">获取短信验证码</a>
+                                </div>
+                                <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
+                                <input type="hidden" name="captchaType" value="sendPwd">
+                                <a style="margin-top:30px;" class="submit-btn" href="javascript:;">登录</a>
+                                <div class="regist-group clearfix">
+                                    <a class="gray Right switchPhone" data-switch-index="1" href="javascript:;">返回账号登录&gt;&gt;</a>
+                                </div>
+                            </div>
+                            <!--手机登录-->
                         </div>
                     </div>
                 </div>
             </aside>
         </div>
     </div>
+    @@include('include/footer.html')
+
 </body>
 <script>
+    //打钩
     $('.checkbox-group>i').on('click', function() {
         if ($(this).hasClass("checked")) {
             $(this).removeClass('checked').siblings('span').removeClass('red');
@@ -108,36 +136,42 @@
         }
     })
 
-
-    /*
-                                                                         
-                                                                                    
-                                                                                    
-                                                      <div id="JS_login_mobile" class="login-mobile Left">
-                                                                                    <div class="input-group">
-                                                                                        <label class="i-phone" for="mobile"></label>
-                                                                                        <input class="yahei gray" name="username" type="text">
-                                                                                    </div>
-                                                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
-                                                                                    <div class="input-group">
-                                                                                        <label class="i-pwd" for="captcha"></label><input maxlength="6" class="Left yahei gray" name="mobileCaptcha" type="text" style="width:150px">
-                                                                                        <a class="Left sms-btn" href="javascript:void(0);">获取短信验证码</a>
-                                                                                    </div>
-                                                                                    <p class="error_tip red" style="visibility: hidden;">&nbsp;</p>
-                                                                                    <input type="hidden" name="captchaType" value="sendPwd">
-                                                                                    <a style="margin-top:30px;" class="submit-btn" href="javascript:;">登录</a>
-                                                                                    <div class="regist-group clearfix">
-                                                                                        <a class="gray Right JS_switch-key" data-switch-index="1" href="javascript:;">返回账号登录&gt;&gt;</a>
-                                                                                    </div>
-                                                                                </div>
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    */
+    //切换登录
+    let _ind = 0;
+    $('.login-switch li.switch-key').on('click', function() {
+        _ind = $(this).index();
+        $(this).addClass('on').siblings('.switch-key').removeClass('on');
+        if (_ind == 0) {
+            $('.login-type').animate({
+                left: '0'
+            });
+            setTimeout(function() {
+                $('.qr-mark').removeClass('none');
+                $('#QR_TEXT').html('二维码获取失败,请刷新页面重试！');
+            }, 5000);
+        }
+        if (_ind == 1) {
+            $('.login-type').animate({
+                left: '-306px'
+            });
+        }
+    })
+    $('.mobile-login').on('click', function() {
+        $('.login-type').animate({
+            left: '-612px'
+        });
+        $('.login-switch').animate({
+            left: '-306px'
+        });
+    })
+    $('.switchPhone').on('click', function() {
+        $('.login-type').animate({
+            left: '-306px'
+        });
+        $('.login-switch').animate({
+            left: '0'
+        });
+    })
 </script>
 
 </html>
