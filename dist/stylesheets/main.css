@@ -677,806 +677,281 @@ footer .footer-index .footerWidth .service dd a {
 }
 
 /*! Component */
-.fsBanner {
+.login-header {
   position: relative;
-}
-.fsBanner .bannerTop {
-  width: 1460px;
+  width: 1190px;
   margin: 0 auto;
-  position: relative;
-}
-@media (max-width: 1460px) {
-  .fsBanner .bannerTop {
-    width: 1190px;
-  }
-}
-.fsBanner .bannerTop .topCont {
-  position: absolute;
-  height: 400px;
-  width: 180px;
-  right: 0;
-  top: 30px;
-  z-index: 200;
-  background: rgba(255, 255, 255, 0.8);
-}
-.fsBanner .bannerTop .topCont .word {
-  text-align: center;
-  font-size: 15px;
-  margin-top: 40px;
-  margin-bottom: 32px;
-}
-.fsBanner .bannerTop .topCont .word p {
-  color: #333;
-  font-size: 14px;
-}
-.fsBanner .bannerTop .topCont .word p span {
-  color: #cf000e;
-  font-size: 20px;
-}
-.fsBanner .bannerTop .topCont a .pavilio {
-  background: url("http://image.meilele.com/images/common/site/site.png") -92px -237px no-repeat;
-  _background: url("http://image.meilele.com/images/common/site/site.png") -92px -237px no-repeat;
-  height: 151px;
-  width: 151px;
-  margin: 0 auto 42px;
-  text-align: center;
-  font-size: 15px;
-}
-.fsBanner .bannerTop .topCont a .pavilio p {
-  font-size: 20px;
-  font-weight: bold;
-  padding-top: 25px;
-  color: #444;
-  position: relative;
-}
-.fsBanner .bannerTop .topCont a .pavilio span {
-  color: #444;
-  font-size: 14px;
-}
-.fsBanner .bannerTop .topCont .expr-btn {
-  display: block;
-  height: 30px;
-  width: 132px;
-  margin: 0 auto;
-  background: url("http://image.meilele.com/images/common/site/site.png") -92px -142px no-repeat;
-  _background: url("http://image.meilele.com/images/common/site/site.gif") -92px -142px no-repeat;
-}
-.fsBanner .bannerTop .topCont .expr-word {
-  height: 16px;
-  width: 136px;
-  background: url("http://image.meilele.com/images/common/site/site.png") -92px -107px no-repeat;
-  _background: url("http://image.meilele.com/images/common/site/site.gif") -92px -107px no-repeat;
-  margin: 10px auto 0;
-}
-.fsBanner .fsBannerCenter {
-  height: 460px;
-  background: #ed5406;
-  -webkit-transition: .1s linear;
-  transition: .1s linear;
-  position: relative;
-}
-.fsBanner .fsBannerCenter li {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-}
-.fsBanner .fsBannerCenter li .fsBannerContent {
-  -webkit-filter: inherit;
-  filter: inherit;
-  width: 1460px;
-  height: 460px;
-  margin: 0 auto;
-}
-@media (max-width: 1460px) {
-  .fsBanner .fsBannerCenter li .fsBannerContent {
-    width: 1190px;
-  }
-}
-.fsBanner .fsBannerCenter li .fsBannerContent a img {
-  -webkit-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-.fsBanner .fsBannerCenter li .fsBannerContent a img.add {
-  -webkit-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
-}
-.fsBanner .fsBannerCenter li .fsBannerContent a img.zhe {
-  position: absolute;
-  top: 20px;
-  right: 200px;
-}
-.fsBanner .fsBannerCenter li .fsBannerContent a img.ddq {
-  position: absolute;
-  top: 20px;
-  right: 200px;
-}
-.fsBanner .fsBannerCenter li .fsBannerContent a img.rightLogo {
-  right: 220px;
-}
-.fsBanner .fsBannerFot {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  z-index: 21;
-  bottom: 8px;
-}
-.fsBanner .fsBannerFot a {
-  width: 10px;
-  height: 10px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  opacity: .8;
-  background: #fff;
-  display: inline-block;
-  margin: 0 4px;
-  opacity: .6;
-}
-.fsBanner .fsBannerFot a.hover {
-  opacity: 1;
-}
-
-section nav.fsNavBox {
-  width: 1460px;
-  margin: 0 auto;
-  height: 36px;
-}
-@media (max-width: 1460px) {
-  section nav.fsNavBox {
-    width: 1190px;
-  }
-}
-section nav.fsNavBox .fsNavH {
-  background: #cf000e;
-  display: inline-block;
-  width: 200px;
-  height: 36px;
-  position: relative;
-  z-index: 32;
-  float: left;
-}
-section nav.fsNavBox .fsNavH h2 {
-  background: #cf000e;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-  color: #fff;
-  font-weight: 400;
-  font-size: 15px;
-  cursor: pointer;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo {
-  padding-top: 5px;
-  height: 460px;
-  background: rgba(0, 0, 0, 0.8);
-  position: relative;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li {
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-  padding: 12px 15px;
-  color: #fff;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li > a {
-  font-size: 14px;
-  color: #fff;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover {
-  background: rgba(248, 248, 248, 0.9);
-  padding-left: 20px;
-  color: #000;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover > a {
-  color: #000;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li:hover .fsSub {
-  opacity: 1;
-  display: block;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub {
-  width: 750px;
-  overflow: hidden;
-  display: none;
-  height: 460px;
-  padding: 9px 30px 25px 15px;
-  left: 200px;
-  top: 0;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.95);
-  _background: #fff;
-  z-index: 10000;
-  position: absolute;
-  line-height: 20px;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL {
-  width: 70.83333%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup {
-  *zoom: 1;
-  padding-top: 16px;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:before, section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:after {
-  content: "";
-  display: table;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup:after {
-  clear: both;
-  overflow: hidden;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li a {
-  color: #000;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubTitle {
-  width: 25%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  font-size: 13px;
-  font-weight: bold;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubTitle i {
-  padding: 5px;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubCont {
-  width: 75%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  font-size: 12px;
-  padding-bottom: 16px;
-  border-bottom: 1px dotted #afacb1;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubL .fsSubGroup li.fsSubCont a {
-  margin-right: 16px;
-  display: inline-block;
-  color: #666 !important;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR {
-  width: 29.16667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  padding-top: 16px;
-  padding-left: 16px;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR h6 {
-  color: #000 !important;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR .tag {
-  margin-bottom: 25px;
-  font-size: 12px;
-  height: 88px;
-  overflow: hidden;
-}
-section nav.fsNavBox .fsNavH .fsNavBoxTwo > li .fsSub .fsSubR .tag a {
-  margin-right: 16px;
-  display: inline-block;
-  color: #666 !important;
-  line-height: 22px;
-}
-section nav.fsNavBox .fsNavList {
-  float: left;
-  height: 36px;
-  line-height: 36px;
-  font-size: 16px;
-  font-weight: 400;
-  *zoom: 1;
-}
-section nav.fsNavBox .fsNavList li {
-  padding-left: 35px;
-  cursor: pointer;
-  float: left;
-}
-section nav.fsNavBox .fsNavList li.hover {
-  color: #cf000e;
-}
-section nav.fsNavBox .fsNavList:before, section nav.fsNavBox .fsNavList:after {
-  content: "";
-  display: table;
-}
-section nav.fsNavBox .fsNavList:after {
-  clear: both;
-  overflow: hidden;
-}
-
-.fsSearchBox {
-  width: 1460px;
-  margin: 0 auto;
-  padding: 29px 0;
-  *zoom: 1;
-}
-@media (max-width: 1460px) {
-  .fsSearchBox {
-    width: 1190px;
-  }
-}
-.fsSearchBox:before, .fsSearchBox:after {
-  content: "";
-  display: table;
-}
-.fsSearchBox:after {
-  clear: both;
-  overflow: hidden;
-}
-.fsSearchBox .fsLogo {
-  width: 16.66667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-}
-.fsSearchBox .fsAd {
-  width: 16.66667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-}
-.fsSearchBox .fsSearchInput {
-  width: 49.16667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-}
-.fsSearchBox .fsSearchInput .fsGroupInput {
-  *zoom: 1;
-  border: 3px solid #cf000e;
-}
-.fsSearchBox .fsSearchInput .fsGroupInput:before, .fsSearchBox .fsSearchInput .fsGroupInput:after {
-  content: "";
-  display: table;
-}
-.fsSearchBox .fsSearchInput .fsGroupInput:after {
-  clear: both;
-  overflow: hidden;
-}
-.fsSearchBox .fsSearchInput .fsGroupInput input[type=text] {
-  width: 87.5%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  height: 30px;
-  border: 0;
-  outline: 0;
-}
-.fsSearchBox .fsSearchInput .fsGroupInput input[type=button] {
-  height: 30px;
-  width: 12.5%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  background: #cf000e;
-  color: #fff;
-  font-size: 20px;
-}
-.fsSearchBox .fsSearchInput .fsKeyInput a {
-  padding: 10px 5px 0;
-  float: left;
-  color: #999;
-  font-size: 14px;
-}
-.fsSearchBox .fsSearchInput .fsKeyInput a:hover {
-  color: #cf000e;
-}
-.fsSearchBox .cq {
-  width: 8.33333%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  position: relative;
-}
-.fsSearchBox .cq .cqback {
-  outline: 1px solid #ccc;
-  position: absolute;
-  left: 130px;
-  top: -20px;
-  padding: 5px;
-}
-.fsSearchBox .cq .cqback p {
-  padding-top: 5px;
-}
-
-.fsTabsBox {
-  height: 185px;
-  margin-top: 20px;
-  width: 1460px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 1460px) {
-  .fsTabsBox {
-    width: 1190px;
-  }
-}
-.fsTabsBox .fsTabs {
-  position: relative;
-  width: 356px;
-  height: 184px;
-  margin-right: 12px;
-  overflow: hidden;
-  float: left;
-}
-@media (max-width: 1460px) {
-  .fsTabsBox .fsTabs {
-    width: 290px;
-    height: 150px;
-    margin-right: 10px;
-  }
-}
-.fsTabsBox .fsTabs:hover img {
-  -webkit-transform: translateX(-5px);
-  -ms-transform: translateX(-5px);
-  transform: translateX(-5px);
-}
-.fsTabsBox .fsTabs img {
-  position: relative;
-  right: 0;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
-}
-.fsTabsBox .fsTabs:nth-last-of-type(1) {
-  margin-right: 0 !important;
-}
-.fsTabsBox .fsTabs .word {
-  position: absolute;
-  font-size: 14px;
-  left: 20px;
-  top: 18px;
-  z-index: 2;
-}
-.fsTabsBox .fsTabs .word p {
-  font-size: 22px;
-}
-
-.fsFloorBox {
-  width: 1460px;
-  margin: 40px auto 0;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox {
-    width: 1190px;
-  }
-}
-.fsFloorBox .fsFloorTitle {
-  border-bottom: 1px solid #333;
-  *zoom: 1;
-}
-.fsFloorBox .fsFloorTitle h3 {
-  font-size: 20px;
-  font-weight: 400;
   text-align: left;
-  width: 256px;
-  line-height: 16px;
-  padding: 4px 0 12px;
+}
+.login-header .user_header {
+  padding: 15px 0px;
+  *zoom: 1;
+}
+.login-header .user_header:before, .login-header .user_header:after {
+  content: "";
+  display: table;
+}
+.login-header .user_header:after {
+  clear: both;
+  overflow: hidden;
+}
+.login-header .user_header .logo {
+  background: url(http://image.meilele.com/images/flow2.png) 0 0 no-repeat;
+  width: 160px;
+  height: 52px;
+}
+.login-header .user_header .nav {
+  width: 180px;
+  padding-top: 40px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.Left {
   float: left;
 }
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorTitle h3 {
-    width: 210px;
-  }
-}
-.fsFloorBox .fsFloorTitle .fsFloorNav1 {
-  float: left;
-}
-.fsFloorBox .fsFloorTitle .fsFloorNav1 li {
-  float: left;
-  line-height: 14px;
-  font-size: 14px;
-  border-bottom: 2px solid #fff;
-  margin-right: 35px;
-  padding: 8px 3px;
-  cursor: pointer;
-  color: #666;
-}
-.fsFloorBox .fsFloorTitle .fsFloorNav1 li.hover {
-  font-size: 15px;
-  font-weight: bold;
-  border-bottom: 2px solid #222;
-  color: #222;
-}
-.fsFloorBox .fsFloorTitle .fsFloorNavR {
+
+.Right {
   float: right;
 }
-.fsFloorBox .fsFloorTitle .fsFloorNavR a {
-  line-height: 32px;
-  margin-right: 24px;
-  color: #666;
+
+.bg-red {
+  background: #cf000e;
 }
-.fsFloorBox .fsFloorTitle:before, .fsFloorBox .fsFloorTitle:after {
+
+.main {
+  padding: 72px 0;
+  min-width: 1190px;
+}
+.main .content {
+  *zoom: 1;
+  margin: 0 auto;
+  width: 1070px;
+  position: relative;
+}
+.main .content:before, .main .content:after {
   content: "";
   display: table;
 }
-.fsFloorBox .fsFloorTitle:after {
+.main .content:after {
   clear: both;
   overflow: hidden;
 }
-.fsFloorBox .fsFloorCont {
+.main .content aside {
+  position: relative;
+  outline: 1px solid blue;
+  min-height: 400px;
+  background: #fff;
+  padding: 27px;
+}
+.main .content aside .yahei {
+  width: 306px;
+  font-family: "Microsoft YaHei", "SimHei";
+}
+.main .content aside .yahei .switch-type {
+  outline: 1px solid yellow;
   position: relative;
   *zoom: 1;
+  width: 306px;
 }
-.fsFloorBox .fsFloorCont:before, .fsFloorBox .fsFloorCont:after {
+.main .content aside .yahei .switch-type:before, .main .content aside .yahei .switch-type:after {
   content: "";
   display: table;
 }
-.fsFloorBox .fsFloorCont:after {
+.main .content aside .yahei .switch-type:after {
   clear: both;
   overflow: hidden;
 }
-.fsFloorBox .fsFloorCont .floorContLeft {
-  float: left;
-  height: 750px;
-  width: 254px;
-  background: #fcfcfc;
-  border-left: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorCont .floorContLeft {
-    height: 610px;
-    width: 210px;
-  }
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aImg .brand-title {
-  position: absolute;
-  font-size: 22px;
-  color: #fff;
-  top: 22px;
-  left: 20px;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aImg .brand-subtitle {
-  position: absolute;
-  font-size: 15px;
-  color: #fff;
-  top: 52px;
-  left: 20px;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aImg .brand-btn {
-  position: absolute;
-  font-size: 12px;
-  display: inline-block;
-  color: #fff;
-  top: 80px;
-  left: 20px;
-  border: 1px solid #fff;
-  padding: 2px 7px;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aImg .floor-img {
-  height: 287px;
-  width: 100%;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aTag {
-  padding: 35px 0 0 16px;
-  height: 182px;
-  overflow: hidden;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorCont .floorContLeft .aTag {
-    padding: 38px 0 0 30px;
-    height: 163px;
-  }
-}
-.fsFloorBox .fsFloorCont .floorContLeft .aTag a {
-  padding-right: 12px;
-  width: 65px;
-  line-height: 28px;
-  overflow: hidden;
-  height: 28px;
-  color: #666;
-  font-size: 13px;
-  text-align: left;
-  display: inline-block;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .ad {
-  text-align: center;
-  padding: 20px 0 12px;
-  width: 254px;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorCont .floorContLeft .ad {
-    width: 210px;
-    padding: 22px 0 14px;
-  }
-}
-.fsFloorBox .fsFloorCont .floorContLeft .ad a {
-  display: inline-block;
-  border-right: 1px solid #f5f5f5;
-  border-bottom: 1px solid #f5f5f5;
-}
-.fsFloorBox .fsFloorCont .floorContLeft .ad a img {
-  overflow: hidden;
-  background: #fff;
-  vertical-align: top;
-  height: 74px;
-  width: 115px;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorCont .floorContLeft .ad a img {
-    height: 60px;
-    width: 94px;
-  }
-}
-.fsFloorBox .fsFloorCont .floorContRight {
-  height: 750px;
-  width: 1204px;
-  float: left;
-}
-@media (max-width: 1460px) {
-  .fsFloorBox .fsFloorCont .floorContRight {
-    height: 609px;
-    width: 979px;
-  }
-}
-
-.scroll-bar {
-  height: 450px;
-  width: 621px;
+.main .content aside .yahei .switch-type .login-switch {
   position: relative;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  color: #888;
+  border-bottom: 1px solid #d1d1d1;
+  width: 459px;
+  left: 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #d1d1d1;
+}
+.main .content aside .yahei .switch-type .login-switch li {
+  position: relative;
   float: left;
-}
-@media (max-width: 1460px) {
-  .scroll-bar {
-    height: 366px;
-    width: 505px;
-  }
-}
-.scroll-bar .content {
-  position: absolute;
-  width: 100%;
-  z-index: 20;
-  bottom: 32px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-}
-.scroll-bar .content a .content-banner {
+  width: 153px;
   text-align: center;
-  margin: 0 auto;
-  height: 90px;
-  width: 245px;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.8);
-  _background: #fff;
-  filter: alpha(opacity=80);
+  padding: 13px 0;
+  cursor: pointer;
 }
-.scroll-bar .content a .content-banner .txt-l {
-  display: inline-block;
-  font-size: 20px;
-  color: #000;
-  padding: 16px 2px 4px;
-  border-bottom: 1px dotted #000;
+.main .content aside .yahei .switch-type .login-switch li.on {
+  margin-bottom: -1px;
+  color: #cf000e;
+  border-bottom: 2px solid #cf000e;
 }
-.scroll-bar .content a .content-banner .txt-s {
-  font-size: 13px;
+.main .content aside .yahei .switch-type .login-switch li.switch-mobile {
   color: #333;
-  margin-top: 4px;
+  text-align: left;
+  margin-bottom: -1px;
+  border-bottom: 2px solid #fff;
 }
-.scroll-bar .fsBanNav {
+.main .content aside .yahei .switch-type .login-switch li.switch-weixin .i-new {
   position: absolute;
-  width: 100%;
-  z-index: 21;
-  bottom: 8px;
+  top: 4px;
+  left: 108px;
 }
-.scroll-bar .fsBanNav .lisBanner {
-  width: 100%;
+.main .content aside .yahei .login-form {
+  width: 306px;
+  overflow: hidden;
+  position: relative;
+}
+.main .content aside .yahei .login-form .login-type {
+  *zoom: 1;
+  left: -306px;
+  position: relative;
+  width: 918px;
+}
+.main .content aside .yahei .login-form .login-type:before, .main .content aside .yahei .login-form .login-type:after {
+  content: "";
+  display: table;
+}
+.main .content aside .yahei .login-form .login-type:after {
+  clear: both;
+  overflow: hidden;
+}
+.main .content aside .yahei .login-form .login-type .login-weixin {
+  height: 298px;
+  padding-top: 53px;
   text-align: center;
 }
-.scroll-bar .fsBanNav .lisBanner a {
-  width: 10px;
-  height: 10px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  opacity: .8;
-  background: #fff;
-  display: inline-block;
-  margin: 0 4px;
-  opacity: .6;
-}
-.scroll-bar .fsBanNav .lisBanner a.hover {
-  opacity: 1;
-}
-
-.floor-bar {
+.main .content aside .yahei .login-form .login-type .login-weixin .qr-code {
   position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid #eee;
-  border-right: 1px solid #eee;
-  float: left;
 }
-.floor-bar:hover img {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
-}
-.floor-bar img {
-  width: 100%;
-  -webkit-transition: .5s ease-out;
-  transition: .5s ease-out;
-}
-.floor-bar > ul {
-  bottom: 18px;
+.main .content aside .yahei .login-form .login-type .login-weixin .qr-code .qr-mark {
   position: absolute;
-  line-height: 18px;
-  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 174px;
+  height: 174px;
+  left: 66px;
+  top: 0;
 }
-.floor-bar > ul li.name a {
-  font-size: 13px;
-  color: #222;
-  display: block;
-  width: 100%;
+.main .content aside .yahei .login-form .login-pwd {
+  padding-top: 25px;
 }
-.floor-bar > ul li.tips a {
-  font-size: 12px;
-  color: #aaa;
-  line-height: 18px;
-  display: block;
-  width: 100%;
+.main .content aside .yahei .login-form .login-pwd .checkbox-group {
+  height: 21px;
+  line-height: 21px;
 }
-.floor-bar > ul li.prize a {
-  font-size: 13px;
-  color: #666;
-  display: block;
-  width: 100%;
-}
-
-.s1 {
-  height: 450px;
-  width: 290px;
-}
-@media (max-width: 1460px) {
-  .s1 {
-    height: 366px;
-    width: 236px;
-  }
-}
-
-.s2 {
-  height: 225px;
-  width: 291px;
-}
-@media (max-width: 1460px) {
-  .s2 {
-    height: 183px;
-    width: 237px;
-  }
-}
-
-.s4,
-.s5 {
-  height: 300px;
-  width: 310px;
-}
-@media (max-width: 1460px) {
-  .s4,
-  .s5 {
-    height: 244px;
-    width: 252px;
-  }
-}
-
-.s7,
-.s6 {
-  height: 300px;
-  width: 291px;
-}
-@media (max-width: 1460px) {
-  .s7,
-  .s6 {
-    height: 244px;
-    width: 237px;
-  }
-}
-
-.fl {
+.main .content aside .yahei .login-form .login-pwd .checkbox-group .i-checkbox {
   float: left;
+  width: 21px;
+  height: 21px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -84px -30px no-repeat;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.main .content aside .yahei .login-form .input-group {
+  position: relative;
+  height: 40px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  line-height: 40px;
+}
+.main .content aside .yahei .login-form .input-group .i-user {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") 0 -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group .i-pwd {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -21px -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group .i-captcha {
+  float: left;
+  width: 19px;
+  height: 19px;
+  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -42px -30px no-repeat;
+  margin: 10px;
+}
+.main .content aside .yahei .login-form .input-group input {
+  float: left;
+  height: 20px;
+  font-size: 13px;
+  width: 254px;
+  border: 0;
+  padding: 10px 0;
+  margin: 0;
+}
+.main .content aside .yahei .login-form .input-group .refresh-btn {
+  color: #4a92f5;
+}
+
+.select-username {
+  position: relative;
+  overflow: inherit;
+}
+
+.captcha-img {
+  margin: 5px;
+}
+
+.error_tip {
+  font-size: 12px;
+  margin: 5px 0 4px;
+}
+
+.red {
+  color: #cf000e;
+}
+
+.gray {
+  color: #b2b2b2;
+}
+
+.black {
+  color: #333 !important;
 }
 
 .none {
   display: none;
+}
+
+.checkbox-group {
+  font-size: 13px;
+}
+
+.submit-btn {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  background-color: #cf000e;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 10px 0 0;
+}
+
+.regist-group {
+  *zoom: 1;
+  margin: 20px 0 30px;
+}
+.regist-group:before, .regist-group:after {
+  content: "";
+  display: table;
+}
+.regist-group:after {
+  clear: both;
+  overflow: hidden;
+}
+
+img {
+  overflow: hidden;
+  vertical-align: top;
+  background: #eee;
 }

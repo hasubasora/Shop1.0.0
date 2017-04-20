@@ -1,3 +1,4 @@
+@charset 'UTF-8';
 .login-header {
     position: relative;
     width: 1190px;
@@ -42,17 +43,21 @@
         position: relative;
         aside {
             position: relative;
-            width: 306px;
+            @include outline(blue);
             min-height: 400px;
             background: #fff;
             padding: 27px;
             .yahei {
+                width: 306px;
                 font-family: "Microsoft YaHei", "SimHei";
                 .switch-type {
+                    @include outline(yellow);
                     position: relative;
+                    @include clearfix;
                     width: 306px;
-                    overflow: hidden;
+                    // overflow: hidden;
                     .login-switch {
+                        //切换登录
                         position: relative;
                         font-size: 16px;
                         font-weight: bold;
@@ -85,6 +90,7 @@
                                 .i-new {
                                     position: absolute;
                                     top: 4px;
+                                    left: 108px;
                                 }
                             }
                         }
