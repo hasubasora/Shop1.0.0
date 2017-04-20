@@ -102,7 +102,7 @@
                     position: relative;
                     .login-type {
                         @include clearfix;
-                        left: -306px;
+                        // left: -306px;
                         position: relative;
                         width: 918px;
                         .login-weixin {
@@ -128,12 +128,9 @@
                             height: 21px;
                             line-height: 21px;
                             .i-checkbox {
-                                float: left;
                                 width: 21px;
                                 height: 21px;
-                                background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -84px -30px no-repeat;
-                                margin-right: 4px;
-                                cursor: pointer;
+                                margin: 0 4px 0 0;
                             }
                         }
                     }
@@ -143,34 +140,13 @@
                         border: 1px solid #ddd;
                         overflow: hidden;
                         line-height: 40px;
-                        .i-user {
-                            float: left;
-                            width: 19px;
-                            height: 19px;
-                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') 0 -30px no-repeat;
-                            margin: 10px;
-                        }
-                        .i-pwd {
-                            float: left;
-                            width: 19px;
-                            height: 19px;
-                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -21px -30px no-repeat;
-                            margin: 10px;
-                        }
-                        .i-captcha {
-                            float: left;
-                            width: 19px;
-                            height: 19px;
-                            background: url('http://image.meilele.com/themes/paipai/images/allPuzzle.png') -42px -30px no-repeat;
-                            margin: 10px;
-                        }
                         input {
                             float: left;
                             height: 20px;
                             font-size: 13px;
                             width: 254px;
                             border: 0;
-                            padding: 10px 0;
+                            padding: 19px 0;
                             margin: 0;
                         }
                         .refresh-btn {
@@ -181,6 +157,26 @@
             }
         }
     }
+}
+
+$formName:(checkbox, -84px -30px),
+(user, 0 -30px),
+(pwd, -21px -30px),
+(captcha, -42px -30px);
+@each $animal,
+$size in $formName {
+    .i-#{$animal} {
+        float: left;
+        background: url('../images/allPuzzle.png') $size no-repeat;
+        cursor: pointer;
+        width: 19px;
+        margin: 10px;
+        height: 19px;
+    }
+}
+
+.checked {
+    background-position: -107px -30px;
 }
 
 .select-username {
@@ -233,6 +229,48 @@
 .regist-group {
     @include clearfix;
     margin: 20px 0 30px;
+    font-size: 12px;
+    a {
+        &:hover {
+            text-decoration: none;
+            color: #4a92f5!important;
+        }
+    }
+}
+
+//icon
+$animal-list: (qq,
+0 0),
+(weibo,
+-28px 0),
+(weixin,
+-56px 0),
+(zhifubao,
+-86px 0),
+(mobile,
+-143px 0);
+@each $animal,
+$size in $animal-list {
+    .i-#{$animal} {
+        @extend %icon;
+        background-position: $size;
+    }
+}
+
+.other-group {
+    font-size: 12px;
+    dt {
+        margin-bottom: 10px;
+    }
+    .other-login {
+        @include clearfix;
+        width: 179px;
+        border-right: 1px solid #e6e6e6;
+    }
+    .mobile-login {
+        padding-left: 20px;
+        _padding-left: 10px;
+    }
 }
 
 img {

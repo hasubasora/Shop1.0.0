@@ -113,6 +113,14 @@ a:hover {
 
 /*! Helpers*/
 /*常用颜色*/
+.i-qq, .i-weibo, .i-weixin, .i-zhifubao, .i-mobile {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  background: url("../images/allPuzzle.png") no-repeat;
+}
+
 /*锛乴ayout */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -191,6 +199,11 @@ input[type=button] {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
 }
 
 img {
@@ -805,7 +818,6 @@ footer .footer-index .footerWidth .service dd a {
 }
 .main .content aside .yahei .login-form .login-type {
   *zoom: 1;
-  left: -306px;
   position: relative;
   width: 918px;
 }
@@ -841,12 +853,9 @@ footer .footer-index .footerWidth .service dd a {
   line-height: 21px;
 }
 .main .content aside .yahei .login-form .login-pwd .checkbox-group .i-checkbox {
-  float: left;
   width: 21px;
   height: 21px;
-  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -84px -30px no-repeat;
-  margin-right: 4px;
-  cursor: pointer;
+  margin: 0 4px 0 0;
 }
 .main .content aside .yahei .login-form .input-group {
   position: relative;
@@ -855,38 +864,57 @@ footer .footer-index .footerWidth .service dd a {
   overflow: hidden;
   line-height: 40px;
 }
-.main .content aside .yahei .login-form .input-group .i-user {
-  float: left;
-  width: 19px;
-  height: 19px;
-  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") 0 -30px no-repeat;
-  margin: 10px;
-}
-.main .content aside .yahei .login-form .input-group .i-pwd {
-  float: left;
-  width: 19px;
-  height: 19px;
-  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -21px -30px no-repeat;
-  margin: 10px;
-}
-.main .content aside .yahei .login-form .input-group .i-captcha {
-  float: left;
-  width: 19px;
-  height: 19px;
-  background: url("http://image.meilele.com/themes/paipai/images/allPuzzle.png") -42px -30px no-repeat;
-  margin: 10px;
-}
 .main .content aside .yahei .login-form .input-group input {
   float: left;
   height: 20px;
   font-size: 13px;
   width: 254px;
   border: 0;
-  padding: 10px 0;
+  padding: 19px 0;
   margin: 0;
 }
 .main .content aside .yahei .login-form .input-group .refresh-btn {
   color: #4a92f5;
+}
+
+.i-checkbox {
+  float: left;
+  background: url("../images/allPuzzle.png") -84px -30px no-repeat;
+  cursor: pointer;
+  width: 19px;
+  margin: 10px;
+  height: 19px;
+}
+
+.i-user {
+  float: left;
+  background: url("../images/allPuzzle.png") 0 -30px no-repeat;
+  cursor: pointer;
+  width: 19px;
+  margin: 10px;
+  height: 19px;
+}
+
+.i-pwd {
+  float: left;
+  background: url("../images/allPuzzle.png") -21px -30px no-repeat;
+  cursor: pointer;
+  width: 19px;
+  margin: 10px;
+  height: 19px;
+}
+
+.i-captcha {
+  float: left;
+  background: url("../images/allPuzzle.png") -42px -30px no-repeat;
+  cursor: pointer;
+  width: 19px;
+  margin: 10px;
+  height: 19px;
+}
+
+.checked {
+  background-position: -107px -30px;
 }
 
 .select-username {
@@ -940,6 +968,7 @@ footer .footer-index .footerWidth .service dd a {
 .regist-group {
   *zoom: 1;
   margin: 20px 0 30px;
+  font-size: 12px;
 }
 .regist-group:before, .regist-group:after {
   content: "";
@@ -948,6 +977,54 @@ footer .footer-index .footerWidth .service dd a {
 .regist-group:after {
   clear: both;
   overflow: hidden;
+}
+.regist-group a:hover {
+  text-decoration: none;
+  color: #4a92f5 !important;
+}
+
+.i-qq {
+  background-position: 0 0;
+}
+
+.i-weibo {
+  background-position: -28px 0;
+}
+
+.i-weixin {
+  background-position: -56px 0;
+}
+
+.i-zhifubao {
+  background-position: -86px 0;
+}
+
+.i-mobile {
+  background-position: -143px 0;
+}
+
+.other-group {
+  font-size: 12px;
+}
+.other-group dt {
+  margin-bottom: 10px;
+}
+.other-group .other-login {
+  *zoom: 1;
+  width: 179px;
+  border-right: 1px solid #e6e6e6;
+}
+.other-group .other-login:before, .other-group .other-login:after {
+  content: "";
+  display: table;
+}
+.other-group .other-login:after {
+  clear: both;
+  overflow: hidden;
+}
+.other-group .mobile-login {
+  padding-left: 20px;
+  _padding-left: 10px;
 }
 
 img {

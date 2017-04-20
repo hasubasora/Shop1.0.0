@@ -44,3 +44,12 @@ $xm:#1ab394 #24bbff #1c84c6 #f8ac59 #23c6c8 #ed5565 #676a6c;
     position: absolute;
     top: -10px;
 }
+
+//icon 的集体图标
+%icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+    background: url('../images/allPuzzle.png') no-repeat;
+}
