@@ -18,6 +18,7 @@ var gulp = require('gulp'),
 
 gulp.task('default', ['jshint'], function() {
     // gulp.start('minifyjs');
+
     return runSequence(['clean'], ['build'], ['serve', 'watch'], ['fileinclude']);
 });
 
