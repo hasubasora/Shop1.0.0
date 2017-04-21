@@ -149,7 +149,7 @@
                 obj2.removeClass('shower');
                 obj3.show();
                 var aaa = $('#register_username').val();
-                var reg = /^[a-zA-Z\W]+[0-9]/g;
+                var reg = /([a-zA-Z\W]+[0-9])|[a-zA-Z\W]/g;
                 console.log(reg.test(aaa));
             }
         });
