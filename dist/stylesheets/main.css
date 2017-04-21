@@ -198,12 +198,17 @@ input {
   border: none;
 }
 
-img {
-  display: block;
-}
-
 .red {
   color: #cf000e;
+}
+
+.blue {
+  color: #4a92f5;
+}
+
+.white,
+a.white {
+  color: #fff;
 }
 
 .gray {
@@ -744,9 +749,249 @@ footer .footer-index .footerWidth .service dd a {
   width: 180px;
   padding-top: 40px;
   text-align: right;
+  font-size: 12px;
 }
 .user_all .user_content {
   border: 1px solid #d7d7d7;
   padding: 40px;
+  *zoom: 1;
+  font-size: 12px;
   padding-right: 0;
+}
+.user_all .user_content:before, .user_all .user_content:after {
+  content: "";
+  display: table;
+}
+.user_all .user_content:after {
+  clear: both;
+  overflow: hidden;
+}
+.user_all .user_content .user_login {
+  width: 768px;
+  border-right: 1px solid #ddd;
+  color: #555;
+}
+.user_all .user_content .user_login form .register_box {
+  padding: 20px 0;
+}
+.user_all .user_content .user_login form .register_box label.tips {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  font-size: 14px;
+}
+.user_all .user_content .user_login form .register_box label.tips span {
+  padding-right: 2px;
+}
+.user_all .user_content .user_login form .register_box input.register_input {
+  height: 40px;
+  line-height: 40px;
+  width: 296px;
+  border: 1px solid #d5d5d5;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.user_all .user_content .user_login form .register_box input.users_input_error {
+  background: #fff3f3;
+  border-color: #ff5242;
+  color: #d10000 !important;
+}
+.user_all .user_content .user_login form .register_box .success {
+  background: url(../images/login_icon2.png) scroll no-repeat 0 -206px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+}
+.user_all .user_content .user_login form .register_box .readed {
+  line-height: 18px;
+  padding: 10px 0 20px 100px;
+}
+.user_all .user_content .user_login form .register_box .readed input {
+  vertical-align: top;
+}
+.user_all .user_content .error {
+  visibility: hidden;
+  height: 22px;
+  line-height: 22px;
+  margin-left: 411px;
+  color: gray;
+  position: relative;
+  top: -28px;
+  width: 265px;
+  height: 26px;
+  line-height: 26px;
+  text-indent: .5em;
+  border: solid 1px #d5d5d5;
+  background: #fff;
+}
+.user_all .user_content .error2 {
+  background: url(../images/user/login_icon2.png?1008) scroll no-repeat 100px -224px;
+  color: #d10000;
+  background: #fff3f3;
+  border: solid 1px #ffe4e4;
+}
+.user_all .user_content .shower {
+  top: -26px;
+  padding: 5px;
+  line-height: 15px;
+  height: 40px;
+  width: 255px;
+  text-indent: 0px;
+  margin-top: -14px;
+  visibility: visible;
+}
+.user_all .user_content #register_captcha_e {
+  position: relative;
+}
+.user_all .user_content #register_captcha_e #JS_captcha {
+  position: absolute;
+  left: 296px;
+  top: 7px;
+  background: url(../images/user/loading.gif) scroll no-repeat center center;
+}
+.user_all .user_content #register_captcha_e .change-one {
+  position: absolute;
+  left: 361px;
+  top: 13px;
+  color: #4a92f5;
+}
+.user_all .user_content #sms_captcha_e {
+  position: relative;
+}
+.user_all .user_content #sms_captcha_e .sms_captcha_wait_span {
+  color: #aaa;
+  display: none;
+}
+.user_all .user_content #sms_captcha_e .sms_captcha_wait_span {
+  position: absolute;
+  left: 285px;
+  top: 3px;
+  display: inline-block;
+  vertical-align: top;
+  width: 111px;
+  height: 34px;
+  line-height: 34px;
+  color: #333;
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 13px;
+}
+.user_all .user_content #sms_captcha_e .get_sms_captcha_btn {
+  position: absolute;
+  left: 285px;
+  top: 3px;
+  display: inline-block;
+  vertical-align: top;
+  width: 111px;
+  height: 34px;
+  line-height: 34px;
+  color: #333;
+  background: #f0f0f0;
+  text-align: center;
+  font-size: 13px;
+}
+.user_all .user_content #sms_captcha_e .get_sms_captcha_btn:hover {
+  color: #4a92f5 !important;
+  text-decoration: none;
+}
+.user_all .regi_btn {
+  cursor: pointer;
+  background: #cf000e;
+  width: 308px;
+  height: 42px;
+  border: 0;
+  outline: 0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.user_all .f16 {
+  font-size: 16px;
+}
+.user_all .operate .yahei {
+  display: inline-block;
+  text-align: center;
+}
+.user_all .operate .yahei img {
+  vertical-align: middle;
+}
+
+.register_submit {
+  background: #cf000e;
+  border: 0;
+  height: 32px;
+  width: 70px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.register_submit {
+  background-position: -117px 0;
+  width: 112px;
+  height: 40px;
+}
+
+.register_submit2 {
+  background-position: -117px -40px;
+  color: #b0b0b0;
+}
+
+.users_submit,
+.register_submit {
+  background: #cf000e;
+  border: 0;
+  height: 32px;
+  width: 70px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.user_register {
+  width: 220px;
+  margin-right: 80px;
+}
+.user_register .user_ok_register {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+.user_register .user_ok_register .logintoreg {
+  display: inline-block;
+  text-align: center;
+  line-height: 32px;
+}
+
+.img_login2 {
+  text-align: center;
+  padding: 90px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.share_login {
+  margin-top: 20px;
+}
+.share_login .api_tips {
+  color: #999;
+  font-size: 12px;
+}
+.share_login .api_from a {
+  background: url(../images/allPuzzle.png);
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.share_login .api_from .qq {
+  background-position: 0 0;
+}
+.share_login .api_from .sina {
+  background-position: -28px 0;
+}
+.share_login .api_from .alipay {
+  background-position: -86px 0;
 }

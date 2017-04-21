@@ -76,12 +76,17 @@ input {
     border: none;
 }
 
-img {
-    display: block;
-}
-
 .red {
     color: #cf000e;
+}
+
+.blue {
+    color: #4a92f5;
+}
+
+.white,
+a.white {
+    color: #fff;
 }
 
 .gray {
