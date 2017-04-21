@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="framework/jquery-2.2.1.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <title>注册</title>
+</head>
+
+<body>
+    <div id="" class="user_all ">
+        <div id="" class="user_header clearfix">
+            <div class="logo Left">
+                <a href="/" title="返回美乐乐首页">
+                    <img style="background:none" src="http://image.meilele.com/images/blank.gif" width="160" height="52" border="0" alt="美乐乐">
+                </a>
+            </div>
+            <div class="Left">
+                <p class="regist_title">用户注册</p>
+            </div>
+            <div id="" class="nav Right">
+                <a href="/">返回首页</a> |
+                <a href="/article_cat-4/article-656.html" target="_blank">帮助中心</a>
+            </div>
+        </div>
+        <div id="" class="user_content clearfix type_register">
+            <div id="" class="user_login Left">
+                <form id="JS_register_form">
+                    <div id="" class="register_box">
+                        <p>
+                            <label class="tips"><span class="red">*</span>帐户名：</label>
+                            <input type="text" name="user_name" class="register_input wrong users_input_error" id="register_username" autocomplete="off" tabindex="10"><span id="register_username_s" class="success" style="display:none;"></span>
+                        </p>
+                        <div id="register_username_a" class="error error2" style="top: -22px; padding: 5px; line-height: 15px; height: 30px; width: 255px; text-indent: 0px; margin-top: -20px; visibility: visible;">用户名可使用字母、汉字、数字、下划线或其组合，4～20个字符，且不能为纯数字</div>
+                        <p>
+                            <label class="tips"><span class="red">*</span>设置密码：</label>
+                            <input type="password" name="password" class="register_input wrong users_input_error" autocomplete="off" id="register_password" tabindex="11"><span id="register_pw_s" class="success" style="display:none;"></span>
+                        </p>
+                        <div id="register_password_a" class="error error2" style="top: -22px; padding: 5px; line-height: 15px; height: 30px; width: 255px; text-indent: 0px; margin-top: -20px; visibility: visible;">6-20位，支持字母、数字或符号的组合，不可单独使用字母、数字或符号</div>
+                        <p>
+                            <label class="tips"><span class="red">*</span>确认密码：</label>
+                            <input type="password" name="confirm_password" autocomplete="off" class="register_input wrong users_input_error" id="register_confirm_password" tabindex="12"><span id="register_rpw_s" class="success" style="display:none;"></span>
+                        </p>
+                        <div id="register_confirm_password_a" class="error error2" style="top: -22px; padding: 5px; line-height: 30px; height: 30px; width: 255px; text-indent: 0px; margin-top: -20px; visibility: visible;">请确保两次输入的密码一致</div>
+                        <p>
+                            <label class="tips"><span class="red">*</span>手机号码：</label>
+                            <input type="text" name="mobile_phone" autocomplete="off" class="register_input users_input_error" id="register_mobile" tabindex="13"><span id="register_mobile_s" class="success" style="display:none;"></span>
+                        </p>
+                        <div id="register_mobile_a" class="error error2" style="top: -22px; padding: 5px; line-height: 30px; height: 30px; width: 255px; text-indent: 0px; margin-top: -20px; visibility: visible;">请输入手机号码</div>
+                        <p id="register_captcha_e">
+                            <label class="tips"><span class="red">*</span>验证码：</label>
+                            <input type="text" name="verification_code" class="register_input" id="register_captcha" tabindex="14" maxlength="4">
+                            <img src="/solr_api/captcha/getCaptcha.do?&amp;_=0.4395594873906912" width="61" height="27" border="0" alt="" id="JS_captcha" style="cursor:pointer">
+                            <a class="change-one" href="javascript:void(0);" id="JS_captcha_tip" tabindex="15">换一张</a>
+                            <span id="register_ver_s" class="success to_error" style="display: inline-block;"></span>
+                        </p>
+                        <div id="register_captcha_a" class="error error2"></div>
+                        <p id="sms_captcha_e" style="display: none">
+                            <label class="tips"><span class="red">*</span>短信验证码：</label>
+                            <input type="test" name="sms_code" class="register_input" id="sms_captcha" tabindex="16">
+                            <span id="sms_captcha_s" class="success" style="display:none;" maxlength="6"></span>
+                            <span id="send_sms_captcha_wait" class="sms_captcha_wait_span"></span>
+                            <a href="javascript:;" id="send_sms_captcha_a" class="get_sms_captcha_btn" onclick="UR.getSmsCaptcha();return false;">获取短信验证码</a>
+                            <span id="sms_capteha_send" class="gray" style="display:none"> 验证码已发送，请查收短信。</span>
+                        </p>
+                        <div id="sms_captcha_s_a" class="error" style="display: none;top:-22px;padding:5px;line-height:30px;height:30px;width:255px; text-indent:0;margin-top:-20px"></div>
+                        <p class="readed gray">
+                            <input type="checkbox" id="sms_checked_look" checked=""><label>请阅读《<a href="/article_cat-15/article-300.html" target="_blank" class="blue" tabindex="17">美乐乐用户注册协议</a>》</label>
+                        </p>
+                        <div id="register_submit0" class="operate" style="padding-left:100px;">
+                            <input type="button" class="regi_btn white f16 yahei clearfix" id="JS_register" tabindex="18" value="注册">
+                        </div>
+                        <div id="register_submit1" class="operate none" style="padding-left:100px;">
+                            <a class="register_submit register_submit2 f16 yahei" style="width:142px;_BACKGROUND-POSITION: -117px -40px;_PADDING-TOP: 6px" id="register_link"><img src="http://img001.mllres.com/themes/paipai/images/user/loading.gif" width="16" height="16">正在注册...</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="" class="user_register Right" style="color:#555;">
+                <div class="user_ok_register">
+                    <span>已注册？</span><a href="/user/?act=login" onclick="addRedirect(this);" class="logintoreg users_submit users_submit2 white yahei" style="color:#fff!important;font-size: 14px;">登录</a>
+                </div>
+
+                <div class="login_api">
+                    <div class="img_login2" style="position: relative;">
+                        <img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGp8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAycmZxQUZuWndiM2UxT3I4VjFvMTQAAgS-e-hYAwTcjAAA" style="width: 120px;height: 120px;" id="JS_img_ewm">
+                        <div id="JS_fixed_login_mc" style="width: 120px;height: 120px;position: absolute;top:89px;left:50px;background-color: rgba(0,0,0,.5);display: none;">
+                            <p style="width: 48px;height: 48px;background: url(http://image.meilele.com/themes/paipai/images/allPuzzle.png) no-repeat;background-position: -123px -53px;position: absolute;top:36px;left:36px;"></p>
+                        </div>
+                        <p style="position: relative;top: 20px;font-size: 14px;line-height: 14px;color: #333;">微信扫一扫，快速登录</p>
+                    </div>
+                    <div class="share_login">
+                        <span class="api_tips">使用合作账号登录：</span>
+                        <br>
+                        <span class="api_from">
+                            <a href="/dubbo_api/user/login/thirdLogin/QQ" onclick="setWindowName('QQ',this);" class="qq" tabindex="9"></a>
+                            <a href="/dubbo_api/user/login/thirdLogin/WEIBO" onclick="setWindowName('新浪微博',this);" class="sina" tabindex="9"></a>
+                            <!-- <a href="javascript:;" class="weixin" tabindex="9"></a> -->
+                            <a href="/dubbo_api/user/login/thirdLogin/ALIPAY" onclick="setWindowName('支付宝',this);" class="alipay" tabindex="9"></a>
+                            <!-- <a href="/dubbo_api/user/login/thirdLogin/TAOBAO" onclick="setWindowName('淘宝',this);" class="taobao" tabindex="9"></a> -->
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

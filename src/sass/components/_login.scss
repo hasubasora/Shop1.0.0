@@ -21,14 +21,6 @@
     }
 }
 
-.Left {
-    float: left;
-}
-
-.Right {
-    float: right;
-}
-
 .bg-red {
     background: #cf000e;
 }
@@ -219,22 +211,6 @@ $size in $formName {
 .error_tip {
     font-size: 12px;
     margin: 5px 0 4px;
-}
-
-.red {
-    color: #cf000e;
-}
-
-.gray {
-    color: #b2b2b2;
-}
-
-.black {
-    color: #333!important;
-}
-
-.none {
-    display: none;
 }
 
 .checkbox-group {
