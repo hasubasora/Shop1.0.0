@@ -21,6 +21,17 @@ textarea {
     -webkit-appearance: none;
 }
 
+// number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 // all style
 html,
 body {
