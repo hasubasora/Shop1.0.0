@@ -113,6 +113,10 @@ a:hover {
 
 /*! Helpers*/
 /*常用颜色*/
+.fsDropdown {
+  position: absolute;
+}
+
 /*锛乴ayout */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -191,10 +195,6 @@ input[type=button] {
   outline: none;
   border: none;
   cursor: pointer;
-}
-
-img {
-  display: block;
 }
 
 footer .footer-icon {
@@ -607,7 +607,6 @@ footer .footer-index .footerWidth .service dd a {
 
 .fsDropdown {
   z-index: 100;
-  position: absolute;
   top: 27px;
   left: -1px;
   background-color: #fff;
@@ -767,6 +766,7 @@ footer .footer-index .footerWidth .service dd a {
   width: 1460px;
   height: 460px;
   margin: 0 auto;
+  text-align: center;
 }
 @media (max-width: 1460px) {
   .fsBanner .fsBannerCenter li .fsBannerContent {

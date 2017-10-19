@@ -168,7 +168,7 @@
 // list
 .fsDropdown {
     z-index: 100;
-    position: absolute;
+    @extend %absolute;
     top: 27px;
     left: -1px;
     background-color: #fff;
